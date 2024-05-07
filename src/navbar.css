@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    background-color: #0c0c0c;
+    box-shadow: 3px 0px 3px black;
+    color: #fff;
+    padding: 14px 10px 14px 15px;
+}
+
+.logojateng {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    margin-right: 20px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.navbar-link {
+    color: #fffffffe;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin-right: 10px;
+    padding: 10px 15px 10px 15px;
+    margin-right: -8px;
+}
+
+.navbar-link:hover {
+    background-color: #ef4b3c;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(51, 51, 51, 0.8);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.line-1 {
+    transform: rotate(0deg);
+}
+
+.line-2 {
+    opacity: 1;
+}
+
+.line-3 {
+    transform: rotate(0deg);
+}
+
+.menu-icon.active .line-1 {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-icon.active .line-2 {
+    opacity: 0;
+}
+
+.menu-icon.active .line-3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #0c0c0c;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar-link {
+        padding: 10px 20px 20px 20px;
+        display: block;
+        margin-right: 80px;
+    }
+
+    .menu-icon {
+        display: flex;
+        overflow: visible;
+        z-index: 1;
+    }
+}
+
