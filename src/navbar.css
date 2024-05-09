@@ -44,17 +44,44 @@
 .navbar-link {
     color: #fffffffe;
     text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
     margin-right: 10px;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 15px;
     margin-right: -8px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.navbar-link::before {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(239, 75, 60, 0.5); /* Warna latar belakang saat di-hover */
+    transition: all 0.3s ease; /* Tambahkan efek transisi */
+    z-index: -1;
+}
+
+.navbar-link:hover::before {
+    left: 0;
+    width: 100%;
 }
 
 .navbar-link:hover {
-    background-color: #ef4b3c;
-    padding: 10px 15px 10px 15px;
-    border-radius: 20px;
+    color: #FFC107; /* Ubah warna teks saat di-hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Ubah warna latar belakang saat di-hover */
+    transform: scale(1.1); /* Efek transformasi saat di-hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Efek bayangan saat di-hover */
+    transition: all 0.3s ease; /* Tambahkan efek transisi */
 }
+
+
+
+
 
 .menu-icon {
     display: none;

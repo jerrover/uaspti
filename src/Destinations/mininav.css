@@ -1,0 +1,40 @@
+.mn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    
+  }
+  
+  .mn-nav {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px; 
+    font-family: 'Poppins', sans-serif; 
+    border: 1px solid black;
+  }
+  
+  .mn-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .mn-li {
+    margin-left: 10px;
+  }
+  
+  .mn-a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  .mn-a:hover {
+    color: #555;
+  }

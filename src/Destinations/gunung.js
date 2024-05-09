@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./wisata.css";
-
 import foto1 from '../Assets/Destinations/Pegunungan/Gunung Andong/1284047_720.jpg';
 import foto2 from  '../Assets/Destinations/Pegunungan/Gunung Merbabu/IMG_0160-1536x768.jpeg';
 import foto3 from  '../Assets/Destinations/Pegunungan/Gunung Prau/3-fakta-gunung-prau-pintu-ke-alam-gaib-hingga-persemayaman-dewa-jz5Ud6U5Ma.jpg';
 import foto4 from  '../Assets/Destinations/Pegunungan/Gunung Sumbing/hamzah-hanafi-kojsgwjvcce-unsplash-07a4f29dba4b014075e472810bb49bf0-692f1a803ec69c4ea8db2333184da2ca.jpg';
 import foto5 from  '../Assets/Destinations/Pegunungan/Gunung Telomoyo/download.jpeg';
+import Mininav from "./mininav";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -15,6 +15,7 @@ export function WisataGunungList() {
   return (
     <div> 
       <WisataJudul />
+      <Mininav />
       <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto"/>

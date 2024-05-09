@@ -1,17 +1,18 @@
 // Di dalam file fotoList.js
 import React from "react";
 import "./wisata.css";
-
 import foto1 from "../Assets/Destinations/Air Terjun/Air Terjun Jumog/air-terjun-jumog-karanganyar.jpg";
 import foto2 from "../Assets/Destinations/Air Terjun/Curug Lawe/lawe_2384844479.jpg";
 import foto3 from "../Assets/Destinations/Air Terjun/Curug Telu/curugtelu.jpg";
 import foto4 from "../Assets/Destinations/Air Terjun/Air Terjun Kedung Kayang/curug-kedung-kayang_169.jpeg";
 import foto5 from "../Assets/Destinations/Air Terjun/Curug Bajing/curug-bajing.jpg";
+import Mininav from "./mininav";
 
-export function Wisatafoto() {
+export function WisataAirTerjun() {
   return (
     <div>
       <WisataJudul />
+      <Mininav />
       <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto"/>
@@ -80,4 +81,4 @@ function WisataFotoInfo({ src, judul, teks }) {
   );
 }
 
-export default Wisatafoto;
+export default WisataAirTerjun;

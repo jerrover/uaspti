@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./wisata.css";
-
 import foto1 from '../Assets/Destinations/Pantai/Pantai Batu Topeng/Pantai-Batu-Topeng-Karimunjawa.jpg';
 import foto2 from  '../Assets/Destinations/Pantai/Pantai Karang/pantai-karang-telu-571c7244b509eaeed27910730903d9ef-fb25aa3fed163dd4690c856d2df4d7e7_600x400.jpg';
 import foto3 from  '../Assets/Destinations/Pantai/Pantai Menganti/YWpHNkgxVjBOTjlQ.jpg';
 import foto4 from  '../Assets/Destinations/Pantai/Pantai Suwuk/explore-Pantai-Suwuk.jpg';
 import foto5 from  '../Assets/Destinations/Pantai/Pantai Tanjung Gelam/Pantai_tanjung_gelam_Taman_Nasional_Karimunjawa.jpg';
+import Mininav from "./mininav";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -15,6 +15,7 @@ export function WisataPantaiList() {
   return (
     <div> 
       <WisataJudul />
+      <Mininav />
       <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto"/>

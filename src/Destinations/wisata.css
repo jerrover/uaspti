@@ -53,10 +53,10 @@
 /* Wisata Foto */
 .wisata-foto {
     width: 350px; /* Lebar gambar tetap 350px */
-    height: 350px; /* Tinggi gambar tetap 350px */
+    height: 500px; /* Tinggi gambar tetap 350px */
     object-fit: cover;
     border-radius: 20px;
-    margin-top: 20px;
+    margin: 10px 10px 10px 10px;
   }
   
   /* Wisata Info */
