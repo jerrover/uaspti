@@ -3,7 +3,7 @@ import SlickSliderSej from "../SlickSlider/slickslidersej";
 import SlickSliderMak from "../SlickSlider/slickslidermak";
 import SlickSliderMus from "../SlickSlider/slickslidermus";
 import axios from "axios";
-import "../HomeStyles.css";
+import "./Home.css";
 
 const VIDEO_ID = "U5DvqDLSxbQ";
 
@@ -24,7 +24,7 @@ const HomeApp = () => {
     const fetchJatengVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDK6Vqzj-ZG7cFJnjBCv0RXjjaQEan-oyo&q=Berita+Jawa+Tengah&type=video&maxResults=6`
+          `https://www.googleapis.com/youtube/v3/search?key=AIzaSyAzpRbU-wyTApMsnus2FEuTfMuYCrfrA3U&q=Berita+Jawa+Tengah&type=video&maxResults=3`
         );
         setJatengVideos(response.data.items);
       } catch (error) {

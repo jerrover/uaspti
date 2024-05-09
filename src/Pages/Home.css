@@ -176,9 +176,16 @@ body {
     border-radius: 15px;
   }
 
+  .home-video-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .home-video-item {
-    margin-left: 0;
-    width: calc(50% - 10px); /* Two videos per row */
+    margin-bottom: 20px;
+    width: 90%; 
+    align-items: center;
   }
 }
 
