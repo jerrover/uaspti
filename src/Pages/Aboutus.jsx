@@ -1,20 +1,20 @@
 import React from "react";
-import Card from "../card";
-import contacts from '../contacts';
-import "../about.css"
+import Card from "../AboutUs/card";
+import contacts from "../AboutUs/contacts";
 
 const Aboutus = () => {
   return (
     <div>
-      <h1>About Us</h1>
-      <div className="cards-container">
+      <div className="about-us" style={{ fontFamily: 'Poppins', textAlign: 'center', fontWeight:'bolder'}}>About Us</div>
+      <div className="cards-container" style={{textAlign: 'center'}}>
         {contacts.map((contact) => (
           <Card
-            key={contact.email}
+            key={contact.name}
             name={contact.name}
             imgURL={contact.imgURL}
-            phone={contact.phone}
+            desc={contact.desc}
             email={contact.email}
+            instagram={contact.instagram}
           />
         ))}
       </div>

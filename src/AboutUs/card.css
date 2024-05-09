@@ -1,0 +1,120 @@
+.about-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 10px; 
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 20px; 
+  justify-content: center;
+  align-items: center;
+}
+
+.about-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin: 0 auto;
+}
+
+
+.about-us {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: lighter;
+  font-size: 40pt;
+  color: black;
+}
+
+.about-card-header {
+  text-align: center;
+}
+
+.about-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+
+.about-card-body p {
+  margin: 5px 0;
+}
+
+.about-card-body a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.about-card-footer {
+  text-align: center;
+}
+
+.about-card-image {
+  text-align: center;
+}
+
+.about-card-image img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.about-card-image h3 {
+  margin: 10px 0;
+  font-family: serif;
+  font-weight: lighter;
+  font-size: 24pt;
+}
+
+.about-card-footer p,
+.about-card-footer a {
+  margin: 5px 0;
+}
+
+.desc {
+  font-family: Verdana;
+  color: black;
+  font-size: 12pt;
+}
+
+.about-social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.about-social-icons a {
+  margin: 0 5px;
+}
+
+h3 {
+  color: black;
+}
+
+.about-card-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-card-logo {
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.about-card-logo:hover {
+  opacity: 0.8;
+}

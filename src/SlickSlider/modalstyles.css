@@ -1,0 +1,42 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.712); /* Menentukan warna overlay */
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background-color: #0c0c0cb1;
+  padding: 30px;
+  z-index: 1000;
+  color: #f2f2f2;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px black;
+  font-family: "poppins", sans-serif;
+}
+
+.modal-content {
+  text-align: center; /* Mengatur teks di tengah horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Menyesuaikan ketinggian modal */
+}
+
+.modal-open {
+  overflow: hidden; /* Mencegah scrolling saat modal muncul */
+}
+
+.blur-background {
+  filter: blur(5px);
+}

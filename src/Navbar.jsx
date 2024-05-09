@@ -37,13 +37,13 @@ function Navbar() {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/categories" className="navbar-link" onClick={toggleMenu}>
-              Category
+            <Link to="/destination" className="navbar-link" onClick={toggleMenu}>
+              Destinasi Wisata
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/services" className="navbar-link" onClick={toggleMenu}>
-              Services
+            <Link to="/tripplan" className="navbar-link" onClick={toggleMenu}>
+              Plan Trip
             </Link>
           </li>
           <li className="navbar-item">

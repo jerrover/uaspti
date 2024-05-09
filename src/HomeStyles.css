@@ -1,40 +1,184 @@
 body {
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    color: #fbfbfb;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #0c0c0c;
+}
+.home-judul {
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-judul iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300vh;
+  height: 110vh;
+  margin-top: 74px;
+  padding-bottom: 250px;
+  pointer-events: none;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+  background-color: #000000;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+.home-judul iframe::-webkit-media-controls-start-playback-button,
+.home-judul iframe::-webkit-media-controls-panel,
+.home-judul iframe::-webkit-media-controls-current-time-display,
+.home-judul iframe::-webkit-media-controls-time-remaining-display,
+.home-judul iframe::-webkit-media-controls-mute-button,
+.home-judul iframe::-webkit-media-controls-toggle-closed-captions-button {
+  display: none !important;
+}
+
+.home-judul h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: lighter;
+  color: #0c0c0c;
+  font-size: 650%;
+  margin-top: -100px;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgb(166, 166, 166);
+}
+
+.home-judul p {
+  font-family: georgia;
+  color: #0c0c0c;
+  margin-top: -50px;
+  font-size: 20px;
+  z-index: 1;
+  text-shadow: 1px 1px 1px whitesmoke;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto 100px;
+  border: 2px solid #0c0c0c;
+  box-shadow: 2px 2px 6px #000000b3, -2px -2px 6px #000000b3;
+  border-radius: 15px;
+  padding: 20px 20px;
+}
+
+.home-video-container {
+  position: relative;
+  overflow: hidden;
+  width: 75%;
+  max-width: 44%;
+  padding-top: 20%;
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 3px #000000b3, -1px -1px 3px #000000b3;
+}
+
+.home-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.home-description-container {
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+  flex: 1;
+  font-family: "poppins", serif;
+  font-size: larger;
+  margin-left: 20px;
+}
+
+.home-description-container.below-video {
+  margin-top: 20px;
+}
+
+.home-gambar-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.home-gambar-grid img {
+  width: calc(33.33% - 5px);
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.home-sliklik {
+  margin-bottom: 40px;
+}
+.home-videojateng {
+  padding: 30px 40px 10px;
+}
+
+.home-video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home-video-item {
+  margin-bottom: 20px;
+  width: calc(33.33% - 10px);
+}
+
+.home-video-item iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  border: 1px solid rgba(77, 77, 77, 0.588);
+}
+
+.home-videojateng h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "poppins", serif;
+}
+
+.home-video-item:nth-child(2n + 1) {
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
   }
-  h1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: lighter;
-    color: black;
-    font-size: 500%;
-    margin-left: 70px;
-    padding-top: 50px;
+
+  .home-video-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    max-width: 90%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 15px;
   }
-  p {
-    font-family: georgia;
-    color: black;
-    margin-top: -50px;
-    margin-left: 80px;
-    font-size: 20px;
+
+  .home-video-item {
+    margin-left: 0;
+    width: calc(50% - 10px); /* Two videos per row */
   }
-  
-  .Vektorwayang {
-    width: 250px;
-    height: 250px;
-    transform: rotate(45deg);
-    opacity: 0;
-    position: absolute;
-    margin-top: -150px;
-    margin-left: -50px;
-  }
-  
-  .pulaujateng {
-    position: absolute;
-    width: 40%;
-    right: 0;
-  }
-  
+}
+

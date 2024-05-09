@@ -1,0 +1,100 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Wisata Content */
+.wisata-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #18a0fb, #6bc1ff); /* Warna latar belakang gradient */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+}
+
+.map-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wisata Container */
+.wisata-container {
+  background: url("https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-Jumog-Wisata-Alam-Jawa-Tengah-Shutterstock.jpg?tr=dpr-2,w-675");
+  padding: 80px; /* Padding diubah agar tidak terlalu banyak */
+  margin: 0;
+  background-size: cover;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 3rem; /* Ukuran font diubah untuk responsif */
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .wisata-container {
+    padding: 10vw; /* Padding responsif untuk layar yang lebih kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .wisata-container {
+    padding: 7vw; /* Padding lebih kecil lagi untuk layar yang sangat kecil */
+  }
+}
+
+/* Wisata Foto */
+/* Wisata Foto */
+.wisata-foto {
+    width: 350px; /* Lebar gambar tetap 350px */
+    height: 350px; /* Tinggi gambar tetap 350px */
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Wisata Info */
+  .wisata-info {
+    margin: 20px;
+    width: 75%; /* Lebar diatur agar sejajar dengan foto */
+  }
+  
+  .wisata-info h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333;
+    align-self: flex-start; /* Menaikkan posisi judul */
+  }
+  
+  .wisata-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #555;
+  }
+
+/* Responsif untuk layar besar */
+@media (max-width: 768px) {
+    .wisata-foto {
+      width: 250px; /* Lebar gambar saat layar mengecil */
+      height: 250px; /* Tinggi gambar saat layar mengecil */
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .wisata-content {
+      flex-direction: row;
+      align-items: flex-start; /* Penataan konten di bagian atas */
+    }
+  
+    .wisata-foto {
+      margin-right: 20px; /* Margin kanan untuk meletakkan teks di sebelah kiri gambar */
+    }
+  }

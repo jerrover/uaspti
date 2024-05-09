@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+}
+
+.destination-category-title {
+    text-align: center;
+    font-family: "poppins", serif;
+    color: black;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.destination-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+}
+
+.destination-category-bubble a {
+    color: transparent;
+    background-image: linear-gradient(45deg, white, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.destination-category-bubble {
+    position: relative;
+    filter: grayscale(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 300px;
+    margin: 10px;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 775;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    flex-grow: 1; 
+}
+
+.destination-category-name1,
+.destination-category-name2 {
+    display: block;
+}
+
+.destination-category-bubble:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.destination-category-bubble:nth-child(1) {
+    background-image: url('https://ik.imagekit.io/tvlk/blog/2023/07/Tibumana-Waterfall.jpg?tr=dpr-2,w-675');
+}
+
+.destination-category-bubble:nth-child(2) {
+    background-image: url('https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/12/05/gunung-tertinggi-di-indonesiajp-20221205124551.jpg');
+}
+
+.destination-category-bubble:nth-child(3) {
+    background-image: url('https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2021/06/candi-9.jpg');
+}
+
+.destination-category-bubble:nth-child(4) {
+    background-image: url('https://statik.tempo.co/data/2021/07/24/id_1037336/1037336_720.jpg');
+}
+
+@media (max-width: 768px) {
+    .destination-category-list {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .destination-category-bubble {
+        width: calc(100% - 20px); 
+    }
+}
