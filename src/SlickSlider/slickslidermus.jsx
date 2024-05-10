@@ -125,22 +125,21 @@ const SlickSliderMus = () => {
   return (
     <div className="ccontainer">
       <h2>Alat Musik Jawa Tengah</h2>
-      <Slider ref={sliderRef} {...settings}>
-        {Data.map((item) => (
-          <div
-            key={item.id}
-            className="card"
-            onClick={() => toggleDescription(item.id, item.description)}
-          >
-            <img src={item.image} alt={item.title} />
-            {activeCard === item.id && (
-              <div className="description">
-                <p>{item.description}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </Slider>
+      <Slider {...settings}>
+  {Data.map((item) => (
+    <div
+      key={item.id}
+      className="card"
+      onClick={() => showModal(item.description)}
+    >
+      <img src={item.image} alt={item.title} />
+      <div className="description">
+        <p>{item.description}</p>
+      </div>
+      <div className="click-me">Click Me</div>
+    </div>
+  ))}
+</Slider>
     </div>
   );
 };

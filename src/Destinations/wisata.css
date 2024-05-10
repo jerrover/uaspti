@@ -1,16 +1,14 @@
-/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Wisata Content */
 .wisata-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, #18a0fb, #6bc1ff); /* Warna latar belakang gradient */
+  background: linear-gradient(to right, #18a0fb, #6bc1ff);
   border-radius: 20px;
   padding: 20px;
   margin: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .map-container {
@@ -23,20 +21,18 @@
   height: auto;
 }
 
-/* Wisata Container */
 .wisata-container {
   background: url("https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-Jumog-Wisata-Alam-Jawa-Tengah-Shutterstock.jpg?tr=dpr-2,w-675");
-  padding: 80px; 
+  padding: 80px;
   margin: 0;
   background-size: cover;
   color: #ffffff;
   border-radius: 20px;
-  font-size: 3rem; 
+  font-size: 3rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Responsif */
 @media (max-width: 768px) {
   .wisata-container {
     padding: 10vw;
@@ -45,55 +41,52 @@
 
 @media (max-width: 480px) {
   .wisata-container {
-    padding: 7vw; 
+    padding: 7vw;
+  }
 }
 
-
 .wisata-foto {
-    width: 350px; 
-    height: 500px; 
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 10px 10px 10px 10px;
-  }
-  
-  /* Wisata Info */
-  .wisata-info {
-    margin: 20px;
-    width: 75%; 
-  }
-  
-  .wisata-info h2 {
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #333;
-    align-self: flex-start; 
-  }
-  
-  .wisata-info p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    color: #555;
-  }
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+}
 
+.wisata-info {
+  margin: 20px;
+  width: 75%;
+}
+
+.wisata-info h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #333;
+  align-self: flex-start;
+}
+
+.wisata-info p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  color: #555;
+}
 
 @media (max-width: 768px) {
-    .wisata-foto {
-      width: 250px; 
-      height: 250px; 
-    }
+  .wisata-foto {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wisata-content {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  @media screen and (min-width: 768px) {
-    .wisata-content {
-      flex-direction: row;
-      align-items: flex-start; 
-    }
-  
-    .wisata-foto {
-      margin-right: 20px; 
-    }
+  .wisata-foto {
+    margin-right: 20px;
   }
 }
