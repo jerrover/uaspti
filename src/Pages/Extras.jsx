@@ -13,11 +13,12 @@ const Extras = () => {
   const [extraSelectedCity, setExtraSelectedCity] = useState("");
   const [extraWeatherData, setExtraWeatherData] = useState(null);
   const [extraLoading, setExtraLoading] = useState(false);
+  const [sortBy, setSortBy] = useState(""); // State untuk sorting
 
   const handleExtraImageSearch = async () => {
     try {
       const response = await axios.get(
-        `${API_URL_PIXABAY}?key=${API_KEY_PIXABAY}&q=${extraSearchTerm}&image_type=photo`
+        `${API_URL_PIXABAY}?key=${API_KEY_PIXABAY}&q=${extraSearchTerm}&image_type=photo${sortBy ? `&order=${sortBy}` : ''}`
       );
       // Ambil 10 gambar pertama dari respons
       const firstTenImages = response.data.hits.slice(0, 5);
@@ -75,6 +76,16 @@ const Extras = () => {
           className="extra-input"
         />
         <button type="submit" className="extra-button">Search Images</button>
+        {/* Dropdown untuk sorting */}
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="extra-select">
+          <option value="">Sort by</option>
+          <option value="popular">Popular</option>
+          <option value="latest">Latest</option>
+          <option value="popular&page=1&order=asc">Ascending Aspect Ratio</option>
+          <option value="popular&page=1&order=desc">Descending Aspect Ratio</option>
+          <option value="downloads">Downloads</option>
+          {/* Tambahkan opsi sorting lainnya sesuai kebutuhan */}
+        </select>
       </form>
       <div className="extra-image-grid">
         {extraImages.map((image) => (
