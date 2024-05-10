@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.712); /* Menentukan warna overlay */
+  background-color: rgba(0, 0, 0, 0.712);
   z-index: 999;
   backdrop-filter: blur(5px);
 }
@@ -26,15 +26,15 @@
 }
 
 .modal-content {
-  text-align: center; /* Mengatur teks di tengah horizontal */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; /* Menyesuaikan ketinggian modal */
+  height: 100%;
 }
 
 .modal-open {
-  overflow: hidden; /* Mencegah scrolling saat modal muncul */
+  overflow: hidden;
 }
 
 .blur-background {

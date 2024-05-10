@@ -26,34 +26,32 @@
 /* Wisata Container */
 .wisata-container {
   background: url("https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-Jumog-Wisata-Alam-Jawa-Tengah-Shutterstock.jpg?tr=dpr-2,w-675");
-  padding: 80px; /* Padding diubah agar tidak terlalu banyak */
+  padding: 80px; 
   margin: 0;
   background-size: cover;
   color: #ffffff;
   border-radius: 20px;
-  font-size: 3rem; /* Ukuran font diubah untuk responsif */
+  font-size: 3rem; 
   text-align: center;
-  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  font-family: 'Poppins', sans-serif; 
 }
 
 /* Responsif */
 @media (max-width: 768px) {
   .wisata-container {
-    padding: 10vw; /* Padding responsif untuk layar yang lebih kecil */
+    padding: 10vw;
   }
 }
 
 @media (max-width: 480px) {
   .wisata-container {
-    padding: 7vw; /* Padding lebih kecil lagi untuk layar yang sangat kecil */
-  }
+    padding: 7vw; 
 }
 
-/* Wisata Foto */
-/* Wisata Foto */
+
 .wisata-foto {
-    width: 350px; /* Lebar gambar tetap 350px */
-    height: 500px; /* Tinggi gambar tetap 350px */
+    width: 350px; 
+    height: 500px; 
     object-fit: cover;
     border-radius: 20px;
     margin: 10px 10px 10px 10px;
@@ -62,7 +60,7 @@
   /* Wisata Info */
   .wisata-info {
     margin: 20px;
-    width: 75%; /* Lebar diatur agar sejajar dengan foto */
+    width: 75%; 
   }
   
   .wisata-info h2 {
@@ -71,7 +69,7 @@
     font-weight: 700;
     font-size: 2rem;
     color: #333;
-    align-self: flex-start; /* Menaikkan posisi judul */
+    align-self: flex-start; 
   }
   
   .wisata-info p {
@@ -80,21 +78,22 @@
     color: #555;
   }
 
-/* Responsif untuk layar besar */
+
 @media (max-width: 768px) {
     .wisata-foto {
-      width: 250px; /* Lebar gambar saat layar mengecil */
-      height: 250px; /* Tinggi gambar saat layar mengecil */
+      width: 250px; 
+      height: 250px; 
     }
   }
 
   @media screen and (min-width: 768px) {
     .wisata-content {
       flex-direction: row;
-      align-items: flex-start; /* Penataan konten di bagian atas */
+      align-items: flex-start; 
     }
   
     .wisata-foto {
-      margin-right: 20px; /* Margin kanan untuk meletakkan teks di sebelah kiri gambar */
+      margin-right: 20px; 
     }
   }
+}
