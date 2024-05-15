@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logojateng from '../Assets/logo/LOGO DEWI JATENG.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,8 +15,7 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgItMW-abdYGZxs_O5z5LsJG9LbwfYErxdxlp6gWIxEq2UPW8m08U9s0Xt0exCfezPFQ9eu1oTlk2rmnIPaFOkz3HRushBitrlx_6iuoN51LWImFfvCjfXcn7KpwQ6oBvdj4roKJGkGOms6CLcn5UwrBuMPL3KlYc0dx7a0pQCx_BvqVrUo5mh-3g/w287-h320/Logo%20Provinsi%20Jawa%20Tengah.png"
-            alt="Jawa Tengah Logo"
+            src= {logojateng}
             className="logojateng"
           />
         </Link>

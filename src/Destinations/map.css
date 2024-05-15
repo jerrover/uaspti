@@ -1,8 +1,8 @@
 .map-container {
-    margin-top: 20px; /* Adjust margin as needed */
+    margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .map-container iframe {

@@ -10,8 +10,9 @@
 }
 
 .logojateng {
-    width: 60px;
-    height: 60px;
+    width: 55x;
+    height: 65px;
+    margin-top: 5px;
 }
 
 .navbar-container {
@@ -21,12 +22,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
 }
 
 .navbar-menu {
@@ -50,7 +45,7 @@
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease; /* Tambahkan efek transisi */
+    transition: all 0.3s ease; 
 }
 
 .navbar-link::before {
@@ -61,8 +56,8 @@
     left: 50%;
     width: 0%;
     height: 100%;
-    background-color: rgba(239, 75, 60, 0.5); /* Warna latar belakang saat di-hover */
-    transition: all 0.3s ease; /* Tambahkan efek transisi */
+    background-color: rgba(239, 75, 60, 0.5);
+    transition: all 0.3s ease; 
     z-index: -1;
 }
 
@@ -72,11 +67,11 @@
 }
 
 .navbar-link:hover {
-    color: #FFC107; /* Ubah warna teks saat di-hover */
-    background-color: rgba(255, 255, 255, 0.2); /* Ubah warna latar belakang saat di-hover */
-    transform: scale(1.1); /* Efek transformasi saat di-hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Efek bayangan saat di-hover */
-    transition: all 0.3s ease; /* Tambahkan efek transisi */
+    color: #FFC107; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.1); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease; 
 }
 
 

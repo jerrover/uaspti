@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { showModal, closeModal } from "./modall.js"; // Import fungsi modal
+import { showModal, closeModal } from "./modall.js"; 
 import "./cards.css";
 import "./modalstyles.css";
 import "./slick.css";
@@ -89,15 +89,13 @@ const SlickSliderSej = () => {
   ];
 
   const [activeCard, setActiveCard] = useState(null);
-  const sliderRef = useRef(null); // Referensi untuk Slider
+  const sliderRef = useRef(null);
 
   const toggleDescription = (id, description) => {
     setActiveCard(activeCard === id ? null : id);
     if (activeCard !== id) {
-      // Tampilkan modal saat kartu diklik
       showModal(description);
     } else {
-      // Tutup modal saat kartu diklik kembali
       closeModal(document.querySelector(".modal"));
     }
   };
@@ -106,16 +104,16 @@ const SlickSliderSej = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Menampilkan 3 gambar per slide
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, // Aktifkan autoplay
-    autoplaySpeed: 3000, // Atur kecepatan autoplay (dalam milidetik)
-    pauseOnHover: true, // Pause autoplay saat hover
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 768, // Breakpoint untuk layar hp
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2, // Ubah menjadi 2 gambar per slide pada layar hp
+          slidesToShow: 2,
         },
       },
     ],
@@ -124,22 +122,21 @@ const SlickSliderSej = () => {
   return (
     <div className="ccontainer">
       <h2>Peninggalan Sejarah Jawa Tengah</h2>
-      <Slider ref={sliderRef} {...settings}>
-        {Data.map((item) => (
-          <div
-            key={item.id}
-            className="card"
-            onClick={() => toggleDescription(item.id, item.description)}
-          >
-            <img src={item.image} alt={item.title} />
-            {activeCard === item.id && (
-              <div className="description">
-                <p>{item.description}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </Slider>
+      <Slider {...settings}>
+  {Data.map((item) => (
+    <div
+      key={item.id}
+      className="card"
+      onClick={() => showModal(item.description)}
+    >
+      <img src={item.image} alt={item.title} />
+      <div className="description">
+        <p>{item.description}</p>
+      </div>
+      <div className="click-me">Click Me</div>
+    </div>
+  ))}
+</Slider>
     </div>
   );
 };

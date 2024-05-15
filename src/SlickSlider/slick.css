@@ -1,42 +1,37 @@
-/* Gaya tombol slide */
 .slick-prev,
 .slick-next {
-  font-size: 0; /* Menghilangkan teks pada tombol navigasi */
+  font-size: 0;
   color: black;
-  border-radius: 50%; /* Membuat lingkaran dengan radius setengah dari lebar atau tinggi */
-  width: 50px; /* Lebar tombol */
-  height: 50px; /* Tinggi tombol */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
   opacity: 0.3;
   transition: opacity 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Mengatur posisi tombol prev */
 .slick-prev {
-  left: 10px; /* Jarak dari sisi kiri kontainer slider */
+  left: 10px;
 }
 
-/* Mengatur posisi tombol next */
 .slick-next {
-  right: 10px; /* Jarak dari sisi kanan kontainer slider */
+  right: 10px;
 }
 
-/* Hover effect untuk tombol slide */
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Mengubah warna latar belakang pada hover */
-  color: white; /* Mengubah warna ikon pada hover */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
   opacity: 1;
 }
 
-/* Gaya dots */
 .slick-dots {
   margin-bottom: 20px;
   display: none;
   opacity: 0;
-  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  font-family: 'Poppins', sans-serif;
 }
