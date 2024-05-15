@@ -3,6 +3,7 @@ import SlickSliderSej from "../SlickSlider/slickslidersej";
 import SlickSliderMak from "../SlickSlider/slickslidermak";
 import SlickSliderMus from "../SlickSlider/slickslidermus";
 import axios from "axios";
+import Lagu from "./lagu";
 import "./Home.css";
 
 const VIDEO_ID = "U5DvqDLSxbQ";
@@ -107,6 +108,7 @@ const HomeApp = () => {
             </div>
           ))}
         </div>
+        <Lagu />
       </div>
     </div>
   );

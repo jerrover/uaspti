@@ -65,8 +65,10 @@ export function WisataAirTerjun() {
   );
 }
 
-function WisataJudul() {
-  return <h1 className="wisata-container">Air Terjun</h1>;
+const backgroundImageUrl = "https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-Jumog-Wisata-Alam-Jawa-Tengah-Shutterstock.jpg?tr=dpr-2,w-675";
+
+function WisataJudul () {
+  return <h1 className="wisata-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Air Terjun</h1>;
 }
 
 function WisataFotoInfo({ src, judul, teks }) {

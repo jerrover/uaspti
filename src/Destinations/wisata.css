@@ -6,12 +6,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, #18a0fb, #6bc1ff); /* Warna latar belakang gradient */
   border-radius: 20px;
   padding: 20px;
   margin: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+  box-shadow: 0px 3px 40px #0e0e0e 
 }
+
 
 .map-container {
   margin-top: 20px;
@@ -31,7 +31,7 @@
   background-size: cover;
   color: #ffffff;
   border-radius: 20px;
-  font-size: 3rem; /* Ukuran font diubah untuk responsif */
+  font-size: 70px ; /* Ukuran font diubah untuk responsif */
   text-align: center;
   font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
 }
@@ -57,6 +57,7 @@
     object-fit: cover;
     border-radius: 20px;
     margin: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 30px #000
   }
   
   /* Wisata Info */

@@ -66,8 +66,9 @@ export function WisataPantaiList() {
   );
 }
 
-function WisataJudul () {
-  return <h1 className="wisata-container">Pantai</h1>
-}
+const backgroundImageUrl = "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/967/2023/12/26/pantai-tanjung-gelam-4039873519.jpg";
 
+function WisataJudul () {
+  return <h1 className="wisata-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Pantai</h1>;
+}
 export default WisataPantaiList;

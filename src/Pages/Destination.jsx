@@ -33,4 +33,6 @@ const DestinationCategoryList = () => {
   );
 };
 
+
+
 export default DestinationCategoryList;
