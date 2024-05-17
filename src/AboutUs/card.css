@@ -21,7 +21,7 @@
 
 .about-us {
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "poppins", serif;
   font-weight: lighter;
   font-size: 40pt;
   color: black;
@@ -71,8 +71,8 @@
 
 .about-card-image h3 {
   margin: 10px 0;
-  font-family: serif;
-  font-weight: lighter;
+  font-family: "poppins", serif;
+  font-weight: bolder;
   font-size: 24pt;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .desc {
-  font-family: Verdana;
+  font-family: "poppins", serif;
   color: black;
   font-size: 12pt;
 }
