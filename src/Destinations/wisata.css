@@ -25,7 +25,6 @@
 }
 
 .wisata-container {
-  background: url("https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-Jumog-Wisata-Alam-Jawa-Tengah-Shutterstock.jpg?tr=dpr-2,w-675");
   padding: 80px;
   margin: 0;
   background-size: cover;
@@ -34,7 +33,6 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
-
 @media (max-width: 768px) {
   .wisata-container {
     padding: 10vw;
@@ -48,8 +46,8 @@
 }
 
 .wisata-foto {
-  width: 350px;
-  height: 500px;
+  width: 250px;
+  height: 350px;
   object-fit: cover;
   border-radius: 20px;
   margin: 10px 10px 10px 10px;
@@ -65,14 +63,12 @@
   font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   font-weight: 700;
-  font-size: 2rem;
   color: #333;
   align-self: flex-start;
 }
 
 .wisata-info p {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
   color: #555;
 }
 

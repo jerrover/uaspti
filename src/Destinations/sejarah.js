@@ -72,9 +72,10 @@ export function WisataBersejarah() {
     </div>
   );
 }
+const backgroundImageUrl = "https://visitjawatengah.jatengprov.go.id/assets/images/f496a13e-7684-4399-bd8a-0da160aa054b.jpg";
 
 function WisataJudul () {
-  return <h1 className="wisata-container">Situs Bersejarah</h1>
+  return <h1 className="wisata-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Situs Bersejarah</h1>;
 }
 
 export default WisataBersejarah;
