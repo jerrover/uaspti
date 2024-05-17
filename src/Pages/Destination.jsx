@@ -11,12 +11,10 @@ const categories = [
 
 const DestinationCategoryBubble = ({ category }) => {
   return (
-    <div className="destination-category-bubble">
-      <Link to={`/destination/${category.link}`}>
-        <span className="destination-category-name1">{category.name1}</span>
-        {category.name2 && <span className="destination-category-name2">{category.name2}</span>}
-      </Link>
-    </div>
+    <Link to={`/destination/${category.link}`} className="destination-category-bubble">
+      <span className="destination-category-name1">{category.name1}</span>
+      {category.name2 && <span className="destination-category-name2">{category.name2}</span>}
+    </Link>
   );
 };
 
@@ -32,7 +30,5 @@ const DestinationCategoryList = () => {
     </div>
   );
 };
-
-
 
 export default DestinationCategoryList;

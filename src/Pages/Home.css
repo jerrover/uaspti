@@ -213,11 +213,19 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 select,
 button {
   font-size: 16px;
   padding: 10px;
   margin-right: 10px;
+  max-width: 100%; /* Ensure elements don't overflow the container */
+  box-sizing: border-box;
 }
 
 button {
@@ -241,4 +249,20 @@ iframe {
   height: 315px;
   border: none;
   border-radius: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  select,
+  button {
+    font-size: 14px;
+    padding: 8px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%; /* Make elements take full width on small screens */
+  }
+
+  .container {
+    padding: 10px;
+  }
 }

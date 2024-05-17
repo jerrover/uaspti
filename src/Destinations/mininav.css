@@ -1,40 +1,82 @@
 .mn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    padding: 0 20px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  overflow-x: auto; /* Ensure the container can scroll horizontally if necessary */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.mn-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers */
+}
+
+.mn-nav {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid black;
+}
+
+.mn-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.mn-li {
+  margin: 0 10px; /* Equal margin on left and right */
+  padding: 0;
+  display: flex;
+  align-items: center; /* Ensure items are vertically centered */
+  justify-content: center; /* Center content horizontally */
+  min-width: 100px; /* Set a minimum width to ensure uniformity */
+}
+
+.mn-a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px; /* Consistent padding for all links */
+  text-align: center; /* Center text inside the link */
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: block; /* Ensure links are block-level elements for padding to apply correctly */
+}
+
+.mn-a:hover {
+  color: #555;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .mn-container {
+      padding: 10px;
+      overflow-x: auto; /* Ensure the container can scroll horizontally if necessary */
   }
-  
+
   .mn-nav {
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0 10px; 
-    font-family: 'Poppins', sans-serif; 
-    border: 1px solid black;
+      margin: 0 5px;
   }
-  
+
   .mn-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+      flex-wrap: nowrap; /* Ensure items do not wrap */
   }
-  
+
   .mn-li {
-    margin-left: 10px;
+      margin: 0 5px; /* Reduce margin for smaller screens */
+      min-width: auto; /* Remove min-width for smaller screens */
   }
-  
+
   .mn-a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s;
-    font-family: 'Poppins', sans-serif; 
+      font-size: 14px; /* Adjust font size for smaller screens */
+      padding: 8px 10px; /* Adjust padding for smaller screens */
   }
-  
-  .mn-a:hover {
-    color: #555;
-  }
+}
