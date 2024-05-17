@@ -257,12 +257,13 @@ button:hover {
 
 iframe {
   width: 100%;
-  height: 315px;
+  height: auto;
   border: none;
+  aspect-ratio: 16/9;
   border-radius: 10px;
+  border: 1px solid rgba(77, 77, 77, 0.588);
 }
 
-/* Media query for small screens */
 @media (max-width: 600px) {
   select,
   button {
@@ -270,7 +271,7 @@ iframe {
     padding: 8px;
     margin-right: 0;
     margin-bottom: 10px;
-    width: 100%; /* Make elements take full width on small screens */
+    width: 100%; 
   }
 
   .container {
