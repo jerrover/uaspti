@@ -2,21 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  padding: 0 20px;
-  overflow-x: auto; /* Ensure the container can scroll horizontally if necessary */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  height: 60px; /* Mengurangi tinggi untuk ruang yang lebih kecil */
+  padding: 0 10px; /* Mengurangi padding untuk ruang yang lebih kecil */
+  overflow-x: auto; /* Pastikan kontainer dapat digulir secara horizontal jika perlu */
+  scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
 }
 
 .mn-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Webkit browsers */
+  display: none; /* Sembunyikan scrollbar di browser Webkit */
 }
 
 .mn-nav {
   background-color: transparent;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 0 10px;
+  padding: 5px; /* Mengurangi padding untuk ruang yang lebih kecil */
+  border-radius: 8px; /* Mengurangi sudut lengkungan untuk ruang yang lebih kecil */
+  margin: 0 20px; /* Mengurangi margin untuk ruang yang lebih kecil */
   font-family: 'Poppins', sans-serif;
   border: 1px solid black;
 }
@@ -26,57 +26,64 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap; /* Prevent items from wrapping */
-  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  flex-wrap: nowrap; /* Mencegah item dari pembungkusan */
+  overflow-x: auto; /* Aktifkan guliran horizontal jika perlu */
 }
 
 .mn-li {
-  margin: 0 10px; /* Equal margin on left and right */
+  margin: 0 5px; /* Margin yang sama di kiri dan kanan */
   padding: 0;
   display: flex;
-  align-items: center; /* Ensure items are vertically centered */
-  justify-content: center; /* Center content horizontally */
-  min-width: 100px; /* Set a minimum width to ensure uniformity */
+  align-items: center; /* Pastikan item terpusat secara vertikal */
+  justify-content: center; /* Tengahkan konten secara horizontal */
+  min-width: 80px; /* Atur lebar minimum untuk memastikan keseragaman */
 }
 
 .mn-a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 14px; /* Sesuaikan ukuran font untuk layar yang lebih kecil */
   transition: color 0.3s;
   font-family: 'Poppins', sans-serif;
-  padding: 10px 15px; /* Consistent padding for all links */
-  text-align: center; /* Center text inside the link */
-  white-space: nowrap; /* Prevent text from wrapping */
-  display: block; /* Ensure links are block-level elements for padding to apply correctly */
+  padding: 8px 12px; /* Padding konsisten untuk semua tautan */
+  text-align: center; /* Tengahkan teks di dalam tautan */
+  white-space: nowrap; /* Cegah teks dari pembungkusan */
+  display: block; /* Pastikan tautan adalah elemen tingkat blok agar padding berlaku dengan benar */
 }
 
 .mn-a:hover {
   color: #555;
 }
 
-/* Media query for responsiveness */
+/* Tandai item yang aktif */
+.mn-a.active {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Media query untuk responsif */
 @media (max-width: 768px) {
   .mn-container {
-      padding: 10px;
-      overflow-x: auto; /* Ensure the container can scroll horizontally if necessary */
+    padding: 5px; /* Mengurangi padding untuk layar yang lebih kecil */
+    overflow-x: auto; /* Pastikan kontainer dapat digulir secara horizontal jika perlu */
   }
 
   .mn-nav {
-      margin: 0 5px;
+    margin: 0 3px; /* Mengurangi margin untuk layar yang lebih kecil */
   }
 
   .mn-ul {
-      flex-wrap: nowrap; /* Ensure items do not wrap */
+    flex-wrap: nowrap; /* Pastikan item tidak dibungkus */
   }
 
   .mn-li {
-      margin: 0 5px; /* Reduce margin for smaller screens */
-      min-width: auto; /* Remove min-width for smaller screens */
+    margin: 0 3px; /* Mengurangi margin untuk layar yang lebih kecil */
+    min-width: auto; /* Hapus lebar minimum untuk layar yang lebih kecil */
   }
 
   .mn-a {
-      font-size: 14px; /* Adjust font size for smaller screens */
-      padding: 8px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Sesuaikan ukuran font untuk layar yang lebih kecil */
+    padding: 6px 8px; /* Sesuaikan padding untuk layar yang lebih kecil */
   }
 }
