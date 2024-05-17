@@ -62,7 +62,7 @@ body {
 
 .home-judul h1 {
   font-family: 'Archivo', sans-serif;
-  font-weight: bolder;
+  font-weight: bold;
   background: linear-gradient(to bottom, #fff200, #e1e1e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

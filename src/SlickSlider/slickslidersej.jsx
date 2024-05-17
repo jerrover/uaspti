@@ -91,10 +91,10 @@ const SlickSliderSej = () => {
   const [activeCard, setActiveCard] = useState(null);
   const sliderRef = useRef(null);
 
-  const toggleDescription = (id, description) => {
+  const toggleDescription = (id, description, imageUrl) => {
     setActiveCard(activeCard === id ? null : id);
     if (activeCard !== id) {
-      showModal(description);
+      showModal(description, imageUrl);
     } else {
       closeModal(document.querySelector(".modal"));
     }
@@ -123,20 +123,20 @@ const SlickSliderSej = () => {
     <div className="ccontainer">
       <h2>Peninggalan Sejarah Jawa Tengah</h2>
       <Slider {...settings}>
-  {Data.map((item) => (
-    <div
-      key={item.id}
-      className="card"
-      onClick={() => showModal(item.description)}
-    >
-      <img src={item.image} alt={item.title} />
-      <div className="description">
-        <p>{item.description}</p>
-      </div>
-      <div className="click-me">Click Me</div>
-    </div>
-  ))}
-</Slider>
+        {Data.map((item) => (
+          <div
+            key={item.id}
+            className="card"
+            onClick={() => toggleDescription(item.id, item.description, item.image)}
+          >
+            <img src={item.image} alt={item.title} />
+            <div className="description">
+              <p>{item.description}</p>
+            </div>
+            <div className="click-me">Click Me</div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };

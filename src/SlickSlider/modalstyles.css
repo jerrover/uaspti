@@ -1,4 +1,29 @@
-/* CSS untuk overlay dengan efek blur */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -22,19 +47,32 @@
   z-index: 1000;
   color: #f2f2f2;
   border-radius: 15px;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 3px rgba(36, 36, 36, 0.715);
   font-family: "Poppins", sans-serif;
   opacity: 0;
   animation: slide-up 0.5s ease forwards;
 }
 
-.modal-content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  border-radius: 15px;
+  z-index: -1;
 }
+
+.modal-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 14px;
+}
+
 
 .modal-open {
   overflow: hidden;
@@ -53,4 +91,8 @@
     transform: translate(-50%, -50%);
     opacity: 1;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
