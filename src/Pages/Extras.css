@@ -40,7 +40,6 @@
   height: auto;
 }
 
-/* New CSS for the weather section */
 .extra-weather-info {
   background-color: #333;
   color: #fff;
@@ -66,4 +65,11 @@
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
+}
+
+.extra-city-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
 }
