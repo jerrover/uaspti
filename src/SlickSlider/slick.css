@@ -32,13 +32,12 @@
 }
 
 .slick-dots {
-  margin-bottom: 20px;
   display: none;
+  margin-bottom: -20px ;
   opacity: 0;
-  font-family: 'Poppins', sans-serif;
+  z-index: -1 ;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .slick-prev,
   .slick-next {

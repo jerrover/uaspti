@@ -23,6 +23,7 @@ body {
   width: auto;
   height: 60px;
   padding-top: 10px;
+  margin-left: -20px;
   z-index: 4;
 }
 
