@@ -21,7 +21,7 @@ body {
 
 .home-judul iframe {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300vh;
@@ -49,20 +49,24 @@ body {
 .home-judul h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: lighter;
-  color: #0c0c0c;
+  background: linear-gradient(to bottom, #fff200, #e1e1e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 650%;
-  margin-top: -100px;
   z-index: 1;
-  text-shadow: 1px 1px 3px rgb(166, 166, 166);
+  text-shadow: 2px 2px 4px #0000003f;
 }
 
 .home-judul p {
   font-family: georgia;
-  color: #0c0c0c;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #fff200, #e1e1e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: -50px;
   font-size: 20px;
   z-index: 1;
-  text-shadow: 1px 1px 1px whitesmoke;
+  text-shadow: 2px 2px 4px #1a151551;
 }
 
 .home-container {
@@ -236,4 +240,5 @@ iframe {
   width: 100%;
   height: 315px;
   border: none;
+  border-radius: 10px;
 }
