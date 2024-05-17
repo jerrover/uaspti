@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   background-size: cover;
   background-attachment: fixed;
@@ -6,6 +8,7 @@ body {
   overflow-x: hidden;
   color: #0c0c0c;
 }
+
 .home-judul {
   position: relative;
   z-index: 2;
@@ -46,27 +49,42 @@ body {
   display: none !important;
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .home-judul h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: lighter;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bolder;
   background: linear-gradient(to bottom, #fff200, #e1e1e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 0px;
   font-size: 650%;
   z-index: 1;
   text-shadow: 2px 2px 4px #0000003f;
+  animation: slideUp 1s ease-out;
 }
 
 .home-judul p {
-  font-family: georgia;
+  font-family: 'Archivo', sans-serif;
   font-weight: bold;
   background: linear-gradient(to bottom, #fff200, #e1e1e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: -50px;
+  margin-top: -20px;
   font-size: 20px;
   z-index: 1;
   text-shadow: 2px 2px 4px #1a151551;
+  animation: slideUp 1s ease-out 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .home-container {
@@ -79,6 +97,7 @@ body {
   box-shadow: 2px 2px 6px #000000b3, -2px -2px 6px #000000b3;
   border-radius: 15px;
   padding: 20px 20px;
+  
 }
 
 .home-video-container {
@@ -131,6 +150,7 @@ body {
 .home-sliklik {
   margin-bottom: 40px;
 }
+
 .home-videojateng {
   padding: 30px 40px 10px;
 }
@@ -180,7 +200,7 @@ body {
     border-radius: 15px;
   }
 
-  .home-video-grid{
+  .home-video-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,19 +208,10 @@ body {
 
   .home-video-item {
     margin-bottom: 20px;
-    width: 90%; 
+    width: 90%;
     align-items: center;
   }
 }
-
-
-
-
-
-
-
-
-
 
 body {
   font-family: Arial, sans-serif;
@@ -224,7 +235,7 @@ button {
   font-size: 16px;
   padding: 10px;
   margin-right: 10px;
-  max-width: 100%; /* Ensure elements don't overflow the container */
+  max-width: 100%; 
   box-sizing: border-box;
 }
 
@@ -266,3 +277,4 @@ iframe {
     padding: 10px;
   }
 }
+

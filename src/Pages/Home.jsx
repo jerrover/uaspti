@@ -37,7 +37,7 @@ const HomeApp = () => {
   }, []);
 
   return (
-    <div>
+    <div className="animate-on-visible">
       <div className="home-judul bgitem">
         <iframe
           width="600"
