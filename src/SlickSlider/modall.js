@@ -2,7 +2,7 @@ const showNotification = (message) => {
   const notificationElement = document.createElement("div");
   notificationElement.textContent = message;
   notificationElement.style.position = "fixed";
-  notificationElement.style.top = "10px";
+  notificationElement.style.top = "20px";
   notificationElement.style.left = "50%";
   notificationElement.style.transform = "translateX(-50%)";
   notificationElement.style.backgroundColor = "yellow";
