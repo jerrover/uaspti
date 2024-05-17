@@ -37,6 +37,7 @@ const Extras = () => {
   const [extraWeatherData, setExtraWeatherData] = useState(null);
   const [extraLoading, setExtraLoading] = useState(false);
   const [sortBy, setSortBy] = useState("");
+  const [cityImage, setCityImage] = useState(null);
 
   const handleExtraImageSearch = async () => {
     try {
@@ -50,13 +51,14 @@ const Extras = () => {
     }
   };
 
-  const handleExtraWeatherDataFetch = async (city) => {
+  const handleExtraWeatherDataFetch = async () => {
     setExtraLoading(true);
     try {
       const response = await axios.get(
-        `${API_URL_OPENWEATHERMAP}?q=${city}&appid=${API_KEY_OPENWEATHERMAP}&units=metric`
+        `${API_URL_OPENWEATHERMAP}?q=${extraSelectedCity}&appid=${API_KEY_OPENWEATHERMAP}&units=metric`
       );
       setExtraWeatherData(response.data);
+      setCityImage(cityImages[extraSelectedCity]);
     } catch (error) {
       console.error("Error fetching weather data:", error);
     } finally {
@@ -64,12 +66,15 @@ const Extras = () => {
     }
   };
 
-  const handleExtraFormSubmit = (e) => {
+  const handleExtraImageFormSubmit = (e) => {
+    e.preventDefault();
+    handleExtraImageSearch();
+  };
+
+  const handleExtraWeatherFormSubmit = (e) => {
     e.preventDefault();
     if (extraSelectedCity) {
-      handleExtraWeatherDataFetch(extraSelectedCity);
-    } else {
-      handleExtraImageSearch();
+      handleExtraWeatherDataFetch();
     }
   };
 
@@ -88,7 +93,7 @@ const Extras = () => {
   return (
     <div className="extra-container">
       <h1 className="extra-heading">Image Search & Weather App</h1>
-      <form className="extra-form" onSubmit={handleExtraFormSubmit}>
+      <form className="extra-form" onSubmit={handleExtraImageFormSubmit}>
         <input
           type="text"
           value={extraSearchTerm}
@@ -113,7 +118,7 @@ const Extras = () => {
           </div>
         ))}
       </div>
-      <form className="extra-form" onSubmit={handleExtraFormSubmit}>
+      <form className="extra-form" onSubmit={handleExtraWeatherFormSubmit}>
         <select value={extraSelectedCity} onChange={(e) => setExtraSelectedCity(e.target.value)} className="extra-select">
           <option value="">Select a city</option>
           {citiesInJawaTengah.map((city) => (
@@ -128,7 +133,7 @@ const Extras = () => {
       {extraWeatherData && (
         <div className="extra-weather-info">
           <h2>Weather in {extraWeatherData.name}</h2>
-          <img src={cityImages[extraSelectedCity]} alt={extraSelectedCity} className="extra-city-image" />
+          {cityImage && <img src={cityImage} alt={extraSelectedCity} className="extra-city-image" />}
           <p>Temperature: {extraWeatherData.main.temp}°C</p>
           <p>Description: {extraWeatherData.weather[0].description}</p>
           <p>Humidity: {extraWeatherData.main.humidity}%</p>
