@@ -6,16 +6,18 @@ body {
   background-color: #f2f2f2;
 }
 
+/* Navbar/Navbar.css */
 .navbar {
-  background-color: #0c0c0c;
-  box-shadow: 1px 0px 3px black;
-  color: #fff;
-  padding: 14px 10px 14px 15px;
-  z-index: 9999;
-  position: fixed; 
-  width: 100%;
-  top: 0; 
+    background-color: #0c0c0c;
+    box-shadow: 1px 0px 3px black;
+    color: #fff;
+    padding: 14px 10px 14px 15px;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
+
 
 .logojateng {
   width: auto;

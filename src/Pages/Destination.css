@@ -13,7 +13,7 @@ body {
 .destination-category-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: center; /* Mengubah justify-content menjadi center */
     align-items: center;
     padding: 20px;
 }
@@ -71,11 +71,11 @@ body {
 
 @media (max-width: 768px) {
     .destination-category-list {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: center; /* Mengubah align-items menjadi center */
     }
 
     .destination-category-bubble {
-        width: calc(100% - 20px); 
+        width: calc(100% - 40px); /* Mengurangi width agar tidak menempel di sisi */
     }
 }
