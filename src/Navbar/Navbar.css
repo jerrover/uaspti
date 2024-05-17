@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0px ;
   overflow-x: hidden;
   background-color: #f2f2f2;
 }
@@ -30,7 +30,7 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px 0 18px;
 }
 
 .navbar-logo {
@@ -108,11 +108,11 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 83px;
+    top: 85px;
     left: 0;
     width: 100%;
     background-color: #1c1c1c;
-    z-index: 5;
+    z-index: 999;
     animation: slideFromTop ease 0.5s forwards;
   }
 
@@ -123,6 +123,7 @@ body {
   .navbar-item {
     margin: 0;
     text-align: center;
+    padding-right: 20px;
     padding-bottom: 10px;
     padding-top: 5px;
   }
@@ -135,7 +136,7 @@ body {
 
   .navbar-link:hover {
     background-color: #ef4b3c;
-    padding: 10px 30vw;
+    padding: 10px 25vw;
     border-radius: 20px;
   }
 
