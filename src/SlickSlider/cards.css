@@ -64,9 +64,9 @@
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
   font-family: "poppins", serif;
-  font-size: 1.5rem;
+  font-size: min(4vw, 1.5rem);
   background-color: rgba(0, 0, 0, 0.539);
-  padding: 5px;
+  padding: 4px;
   border-radius: 4px;
   opacity: 0;
   text-align: center;
