@@ -43,7 +43,7 @@ function Navbar() {
           </li>
           <li className="navbar-item">
             <Link to="/extras" className="navbar-link" onClick={toggleMenu}>
-              Extras
+              Image & Weather
             </Link>
           </li>
           <li className="navbar-item">
