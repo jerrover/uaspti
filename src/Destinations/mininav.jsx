@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./mininav.css";
 
 function Mininav() {
@@ -8,16 +8,16 @@ function Mininav() {
       <nav className="mn-nav">
         <ul className="mn-ul">
           <li className="mn-li">
-            <Link to="/destination/terjun" className="mn-a">Air Terjun</Link>
+            <NavLink to="/destination/terjun" className="mn-a" activeClassName="active">Air Terjun</NavLink>
           </li>
           <li className="mn-li">
-            <Link to="/destination/gunung" className="mn-a">Gunung</Link>
+            <NavLink to="/destination/gunung" className="mn-a" activeClassName="active">Gunung</NavLink>
           </li>
           <li className="mn-li">
-            <Link to="/destination/situs" className="mn-a">Situs Bersejarah</Link>
+            <NavLink to="/destination/situs" className="mn-a" activeClassName="active">Situs Bersejarah</NavLink>
           </li>
           <li className="mn-li">
-            <Link to="/destination/pantai" className="mn-a">Pantai</Link>
+            <NavLink to="/destination/pantai" className="mn-a" activeClassName="active">Pantai</NavLink>
           </li>
         </ul>
       </nav>

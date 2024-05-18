@@ -91,12 +91,12 @@ const SlickSliderSej = () => {
   const [activeCard, setActiveCard] = useState(null);
   const sliderRef = useRef(null);
 
-  const toggleDescription = (id, description, imageUrl) => {
+  const toggleDescription = (id, title, description, imageUrl) => {
     setActiveCard(activeCard === id ? null : id);
     if (activeCard !== id) {
-      showModal(description, imageUrl);
+      showModal(title, description, imageUrl);
     } else {
-      closeModal(document.querySelector(".modal"));
+      closeModal();
     }
   };
 
@@ -127,7 +127,7 @@ const SlickSliderSej = () => {
           <div
             key={item.id}
             className="card"
-            onClick={() => toggleDescription(item.id, item.description, item.image)}
+            onClick={() => toggleDescription(item.id, item.title, item.description, item.image)}
           >
             <img src={item.image} alt={item.title} />
             <div className="description">
@@ -140,5 +140,4 @@ const SlickSliderSej = () => {
     </div>
   );
 };
-
 export default SlickSliderSej;
