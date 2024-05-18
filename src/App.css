@@ -1,20 +1,23 @@
 /* App.css */
 body, #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('./Assets/Background/background.jpg'); /* Path ke gambar background */
+  background-size: cover; /* Menutupi seluruh area */
+  background-repeat: no-repeat; /* Tidak mengulang */
+  background-attachment: fixed; /* Background tetap di tempat saat di-scroll */
+  background-position: center; /* Memposisikan gambar di tengah */
   }
-  
-  .app {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-  
-  .main-content {
-    flex-grow: 1;
-    padding-top: 85px;
-  }
-  
-  
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 85px;
+}
