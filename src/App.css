@@ -17,18 +17,4 @@ body, #root {
     padding-top: 85px;
   }
   
-  /* Footer.css */
-  .footer {
-    background-color: #0c0c0c;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    margin-top: auto; /* Ensures footer stays at the bottom */
-  }
-  
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
   

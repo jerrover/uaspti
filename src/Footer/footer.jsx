@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <p>&copy;2024 Dewi Jateng.</p>
-        <p>Page Developed by IFUMIE (Informatika UMN-Tarsisius Vireta)</p>
+        <p>Page Developed by Team 4 - IFUMIE (Informatika UMN-Tarsisius Vireta)</p>
         <p>All rights reserved.</p>
       </div>
     </footer>
