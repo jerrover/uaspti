@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Destination.css";
 
 const categories = [
@@ -11,7 +13,7 @@ const categories = [
 
 const DestinationCategoryBubble = ({ category }) => {
   return (
-    <Link to={`/destination/${category.link}`} className="destination-category-bubble">
+    <Link to={`/destination/${category.link}`} className="destination-category-bubble" data-aos="fade-up">
       <span className="destination-category-name1">{category.name1}</span>
       {category.name2 && <span className="destination-category-name2">{category.name2}</span>}
     </Link>
@@ -19,9 +21,13 @@ const DestinationCategoryBubble = ({ category }) => {
 };
 
 const DestinationCategoryList = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div>
-      <h1 className="destination-category-title">Kategori Wisata</h1>
+      <h1 className="destination-category-title" data-aos="fade-down">Kategori Wisata</h1>
       <div className="destination-category-list">
         {categories.map((category) => (
           <DestinationCategoryBubble key={category.id} category={category} />
