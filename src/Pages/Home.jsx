@@ -47,7 +47,7 @@ const HomeApp = () => {
 
   return (
     <div className="animate-on-visible">
-      <div className="home-judul bgitem" data-aos="fade-up">
+      <div className="home-judul bgitem" data-aos="fade-in">
         <iframe
           width="600"
           height="315"

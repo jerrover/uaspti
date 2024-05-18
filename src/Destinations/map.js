@@ -6,7 +6,7 @@ function MapEmbed({ coordinates }) {
     <div className="map-container">
       <iframe
         title="Map"
-        width="100%"
+        width="300"
         height="300"
         frameBorder="0"
         scrolling="no"
