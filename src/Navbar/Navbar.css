@@ -1,7 +1,7 @@
 body {
   font-family: "poppins", serif;
   margin: 0;
-  padding: 0px ;
+  padding: 0;
   overflow-x: hidden;
   width: 100vw;
   background-color: #f2f2f2;
@@ -14,11 +14,16 @@ body {
   color: #fff;
   padding: 8px 6px 8px 11px;
   z-index: 999;
-  position: fixed; 
+  position: fixed;
   width: 100vw;
-  top: 0; 
+  top: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.navbar:hover {
+  background-color: #1a1a1a;
+  box-shadow: 1px 0px 5px black;
+}
 
 .logojateng {
   width: auto;
@@ -62,19 +67,20 @@ body {
   text-decoration: none;
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
   margin-right: 10px;
-  padding: 10px 15px 10px 15px;
-  margin-right: -8px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .navbar-link:hover {
   background-color: #ef4b3c;
-  padding: 10px 15px 10px 15px;
   border-radius: 20px;
+  transform: scale(1.05);
+  color: yellow;
 }
 
 .content {
   max-width: 800px;
-  margin: 100px auto 50px; 
+  margin: 100px auto 50px;
   text-align: center;
 }
 
@@ -89,9 +95,14 @@ body {
   width: 25px;
   height: 3px;
   background-color: #f2f2f2d8;
-  margin: 4px 25px;
+  margin: 4px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
+}
+
+.menu-icon:hover .menu-icon-line {
+  background-color: #ef4b3c;
+  transform: scale(1.1);
 }
 
 .line {
@@ -112,7 +123,7 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 85px;
+    top: 70px;
     left: 0;
     width: 100%;
     background-color: #1c1c1c;
@@ -138,6 +149,7 @@ body {
     margin-right: 80px;
     position: relative;
     overflow: hidden;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
   }
   
   .navbar-link::before {
@@ -161,9 +173,10 @@ body {
   
   .navbar-link:hover {
     z-index: 1;
+    transform: scale(1.05);
+    color: yellow;
   }
   
-
   .menu-icon {
     display: flex;
     overflow: visible;
