@@ -29,10 +29,23 @@
   margin: 0;
   background-size: cover;
   color: #ffffff;
-  font-size: 70px;
+  font-size: 10vw; 
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+
+@media (max-width: 600px) {
+  .wisata-container {
+    font-size: 8vw; /* Menyesuaikan ukuran font untuk layar lebih kecil */
+  }
+}
+
+@media (max-width: 400px) {
+  .wisata-container {
+    font-size: 6vw; /* Menyesuaikan ukuran font untuk layar yang lebih kecil */
+  }
+}
+
 @media (max-width: 768px) {
   .wisata-container {
     padding: 10vw;
