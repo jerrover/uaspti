@@ -5,6 +5,8 @@ import SlickSliderMus from "../SlickSlider/slickslidermus";
 import axios from "axios";
 import Lagu from "./lagu";
 import "./Home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const VIDEO_ID = "U5DvqDLSxbQ";
 
@@ -13,6 +15,12 @@ const HomeApp = () => {
   const [jatengVideos, setJatengVideos] = useState([]);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 768);
     };
@@ -27,7 +35,7 @@ const HomeApp = () => {
         const response = await axios.get(
           `https://www.googleapis.com/youtube/v3/search?key=AIzaSyADm5yHWhhB0rocn7hxPiN9pjE4Y2d3qMc&q=Berita+Jawa+Tengah&type=video&maxResults=3`
         );
-        
+
         setJatengVideos(response.data.items);
       } catch (error) {
         console.error("Error fetching Jawa Tengah videos:", error);
@@ -39,7 +47,7 @@ const HomeApp = () => {
 
   return (
     <div className="animate-on-visible">
-      <div className="home-judul bgitem">
+      <div className="home-judul bgitem" data-aos="fade-up">
         <iframe
           width="600"
           height="315"
@@ -52,7 +60,7 @@ const HomeApp = () => {
         <h1>Dewi Jateng</h1>
         <p>Destinasi Wisata Jawa Tengah</p>
       </div>
-      <div className="home-container">
+      <div className="home-container" data-aos="fade-up">
         <div className="home-video-container">
           <ul>
             <li>
@@ -71,6 +79,7 @@ const HomeApp = () => {
           className={`home-description-container ${
             isSmallScreen ? "below-video" : ""
           }`}
+          data-aos="fade-up"
         >
           <h3>Jawa Tengah</h3>
           <p>
@@ -82,16 +91,16 @@ const HomeApp = () => {
           </p>
         </div>
       </div>
-      <div className="home-sliklik">
+      <div className="home-sliklik" data-aos="fade-up">
         <SlickSliderSej />
       </div>
-      <div className="home-sliklik">
+      <div className="home-sliklik" data-aos="fade-up">
         <SlickSliderMak />
       </div>
-      <div className="home-sliklik">
+      <div className="home-sliklik" data-aos="fade-up">
         <SlickSliderMus />
       </div>
-      <div className="home-videojateng">
+      <div className="home-videojateng" data-aos="fade-up">
         <h2>Berita Seputar Jawa Tengah</h2>
         <div className="home-video-grid">
           {jatengVideos.slice(0, 6).map((video) => (
