@@ -28,7 +28,7 @@ const showNotification = (message) => {
   }, 3000);
 };
 
-const showModal = (description, imageUrl) => {
+const showModal = (title, description, imageUrl) => {
   document.body.classList.add("modal-open");
   const overlay = document.createElement("div");
   overlay.classList.add("overlay");
@@ -38,6 +38,10 @@ const showModal = (description, imageUrl) => {
 
   const modalContent = document.createElement("div");
   modalContent.classList.add("modal-content");
+
+  const modalTitle = document.createElement("h2");
+  modalTitle.textContent = title;
+  modalContent.appendChild(modalTitle);
 
   const modalText = document.createElement("p");
   modalText.innerHTML = description;

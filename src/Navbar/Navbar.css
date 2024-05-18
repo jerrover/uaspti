@@ -9,7 +9,7 @@ body {
 
 .navbar {
   font-family: "poppins", serif;
-  background-color: #0c0c0c;
+  background-color: #000000;
   box-shadow: 1px 0px 3px black;
   color: #fff;
   padding: 8px 6px 8px 11px;
@@ -101,7 +101,7 @@ body {
 }
 
 .menu-icon:hover .menu-icon-line {
-  background-color: #ef4b3c;
+  background-color: #c49b06;
   transform: scale(1.1);
 }
 

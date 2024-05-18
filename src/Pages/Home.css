@@ -8,6 +8,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   color: #0c0c0c;
+  background-color: rgba(215, 215, 215, 0.721);
 }
 
 .home-judul {
@@ -68,19 +69,19 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: -80px;
-  font-size: 6.5em; /* Use 'em' for more responsive scaling */
+  font-size: 6.5em; 
   z-index: 1;
   position: relative;
   text-shadow:
-    1px 1px 0 #d4af37,
-    2px 2px 0 #d4af37,
-    3px 3px 0 #d4af37,
-    4px 4px 0 rgba(0, 0, 0, 0.2),
-    4px 4px 8px rgba(0, 0, 0, 0.2);
+    1px 1px 0 #d4af37ad,
+    2px 2px 0 #d4af37ad,
+    3px 3px 0 #d4af37ad,
+    4px 4px 0 rgba(0, 0, 0, 0.984),
+    4px 4px 8px rgba(0, 0, 0, 0.56);
   animation: fadeInSlideUp 1.5s ease-out;
-  filter: drop-shadow(0px 0px 20px #ffec00); /* Outer glow effect */
-  -webkit-text-stroke: 0.7px black; /* Text border */
-  text-stroke: 0.7px black; /* Text border */
+  filter: drop-shadow(0px 0px 7px #ffec00);
+  -webkit-text-stroke: 0.7px black; 
+  text-stroke: 0.7px black; 
 }
 
 .home-judul p {
@@ -92,9 +93,11 @@ body {
   margin-top: -5px;
   font-size: 25px;
   z-index: 1;
-  text-shadow: 2px 2px 4px #1a151551;
+  text-shadow: 2px 2px 4px #1a151574;
   animation: slideUp 1s ease-out 0.5s;
   animation: fadeInSlideUp 1.5s ease-out;
+  -webkit-text-stroke: 0.2px black; 
+  text-stroke: 0.2px black; 
 }
 
 .home-container {
@@ -107,6 +110,7 @@ body {
   box-shadow: 2px 2px 6px #000000b3, -2px -2px 6px #000000b3;
   border-radius: 15px;
   padding: 20px 20px;
+  background-color: whitesmoke;
   
 }
 
@@ -136,7 +140,6 @@ body {
   color: black;
   flex: 1;
   font-family: "poppins", serif;
-  font-size: larger;
   margin-left: 20px;
 }
 
@@ -182,6 +185,7 @@ body {
   border: none;
   aspect-ratio: 16/9;
   border-radius: 10px;
+  box-shadow: 3px 3px 3px rgb(99, 99, 99);
   border: 1px solid rgba(77, 77, 77, 0.588);
 }
 
@@ -197,7 +201,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .home-judul h1 {
-    font-size: 4em;
+    font-size: 4.7em;
+    padding: 1px 50px;
   }
 
   .home-judul p{
