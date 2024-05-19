@@ -1,3 +1,6 @@
+/* Import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .footer {
   background-color: #0c0c0c;
   color: #fff;
@@ -5,11 +8,13 @@
   width: 100%;
   margin-top: auto;
   text-align: left; /* Mengubah teks agar rata kiri */
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Menambahkan padding untuk memberikan ruang pada layar yang lebih kecil */
 }
 
 .footer-navigation {
@@ -17,6 +22,8 @@
   display: flex;
   flex-direction: row; /* Menjaga arah flex menjadi horizontal */
   gap: 20px; /* Mengatur jarak antara link */
+  flex-wrap: nowrap; /* Mencegah flex item melipat ke baris baru */
+  overflow-x: auto; /* Menambahkan scroll horizontal jika konten terlalu lebar untuk layar kecil */
 }
 
 .footer-link {
@@ -25,8 +32,45 @@
   padding: 5px 0;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
+  white-space: nowrap; /* Mencegah teks link melipat ke baris baru */
+  font-size: 1rem; /* Mengatur ukuran font */
 }
 
 .footer-link:hover {
   border-bottom: 1px solid #fff; /* atau warna lain sesuai desain */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 10px; /* Mengurangi padding pada layar yang lebih kecil */
+  }
+
+  .footer-navigation {
+    gap: 10px; /* Mengurangi jarak antar link pada layar yang lebih kecil */
+  }
+
+  .footer-link {
+    padding: 5px 0; /* Menjaga padding tetap kecil untuk sentuhan yang lebih mudah pada layar kecil */
+    font-size: 0.9rem; /* Mengurangi ukuran font pada layar yang lebih kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    text-align: left; /* Mengubah teks agar tetap rata kiri pada layar yang sangat kecil */
+  }
+
+  .footer-content {
+    padding: 0 5px; /* Mengurangi padding lebih lanjut pada layar yang sangat kecil */
+  }
+
+  .footer-navigation {
+    justify-content: flex-start; /* Menyesuaikan link agar rata kiri */
+    gap: 5px; /* Mengurangi jarak antar link pada layar yang sangat kecil */
+  }
+
+  .footer-link {
+    padding: 3px 0; /* Mengurangi padding lebih lanjut pada layar sangat kecil */
+    font-size: 0.8rem; /* Mengurangi ukuran font lebih lanjut pada layar sangat kecil */
+  }
 }
