@@ -14,15 +14,15 @@ body {
 }
 @media (max-width: 768px) {
   body {
-      background-size: contain;  /* Menyesuaikan ukuran gambar dengan tetap menjaga rasio aspek */
-      background-attachment: scroll;  /* Membuat gambar bergerak saat halaman di-scroll */
+      background-size: contain;  
+      background-attachment: scroll;  
   }
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ubah dari flex-grow: 1; menjadi min-height: 100vh; */
+  min-height: 100vh; 
 }
 
 .main-content {
@@ -31,5 +31,5 @@ body {
 }
 
 .footer {
-  margin-top: auto; /* Menarik footer ke bagian bawah */
+  margin-top: auto; 
 }
