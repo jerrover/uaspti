@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Extras.css";
 
@@ -38,6 +38,10 @@ const Extras = () => {
   const [extraLoading, setExtraLoading] = useState(false);
   const [sortBy, setSortBy] = useState("");
   const [cityImage, setCityImage] = useState(null);
+  
+  useEffect(() => {
+    handleExtraImageSearch();
+  }, [sortBy]);
 
   const handleExtraImageSearch = async () => {
     try {
