@@ -1,4 +1,3 @@
-/* App.css */
 body {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,7 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ubah dari flex-grow: 1; menjadi min-height: 100vh; */
+  min-height: 100vh; 
 }
 
 .main-content {

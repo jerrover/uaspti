@@ -1,9 +1,9 @@
 .about-card {
-  width: 300px;
+  width: 313px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 10px; 
+  margin: 8px 8px; 
   padding: 20px;
   display: inline-block;
   margin-bottom: 20px; 
@@ -17,7 +17,6 @@
   justify-content: center; 
   margin: 0 auto;
 }
-
 
 .about-us {
   text-align: center;
@@ -117,4 +116,9 @@ h3 {
 
 .about-card-logo:hover {
   opacity: 0.8;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
 }

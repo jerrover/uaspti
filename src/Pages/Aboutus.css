@@ -42,9 +42,5 @@
     .intro {
       font-size: 16px; /* Mengurangi ukuran font intro untuk layar yang lebih kecil */
     }
-  
-    .card {
-      max-width: 250px; /* Mengurangi lebar maksimum kartu untuk layar yang lebih kecil */
-    }
   }
   
