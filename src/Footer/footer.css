@@ -9,6 +9,7 @@
   margin-top: auto;
   text-align: left; /* Mengubah teks agar rata kiri */
   font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  font-size: 1rem; /* Mengatur ukuran font default */
 }
 
 .footer-content {
@@ -33,7 +34,6 @@
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
   white-space: nowrap; /* Mencegah teks link melipat ke baris baru */
-  font-size: 1rem; /* Mengatur ukuran font */
 }
 
 .footer-link:hover {
@@ -41,6 +41,10 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    font-size: 0.85rem; /* Mengurangi ukuran font untuk seluruh footer pada layar yang lebih kecil */
+  }
+
   .footer-content {
     padding: 0 10px; /* Mengurangi padding pada layar yang lebih kecil */
   }
@@ -51,13 +55,13 @@
 
   .footer-link {
     padding: 5px 0; /* Menjaga padding tetap kecil untuk sentuhan yang lebih mudah pada layar kecil */
-    font-size: 0.9rem; /* Mengurangi ukuran font pada layar yang lebih kecil */
   }
 }
 
 @media (max-width: 480px) {
   .footer {
     text-align: left; /* Mengubah teks agar tetap rata kiri pada layar yang sangat kecil */
+    font-size: 0.75rem; /* Mengurangi ukuran font lebih lanjut untuk seluruh footer pada layar yang sangat kecil */
   }
 
   .footer-content {
@@ -71,6 +75,5 @@
 
   .footer-link {
     padding: 3px 0; /* Mengurangi padding lebih lanjut pada layar sangat kecil */
-    font-size: 0.8rem; /* Mengurangi ukuran font lebih lanjut pada layar sangat kecil */
   }
 }

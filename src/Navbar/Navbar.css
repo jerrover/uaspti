@@ -5,6 +5,7 @@ body {
   overflow-x: hidden;
   width: 100vw;
   background-color: #f2f2f2;
+  font-size: 1rem;
 }
 
 .navbar {
@@ -12,7 +13,7 @@ body {
   background-color: #000000;
   box-shadow: 1px 0px 3px black;
   color: #fff;
-  padding: 8px 6px 8px 11px;
+  padding: 0.75rem 1rem;
   z-index: 999;
   position: fixed;
   width: 100vw;
@@ -22,9 +23,9 @@ body {
 
 .logojateng {
   width: auto;
-  height: 50px;
-  padding-top: 10px;
-  margin-left: -20px;
+  height: 3rem; /* Sesuaikan dengan rem */
+  padding-top: 0.625rem;
+  margin-left: -1.25rem;
   z-index: 4;
 }
 
@@ -32,9 +33,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 75rem; /* Gunakan rem untuk max-width */
   margin: 0 auto;
-  padding: 0 30px 0 18px;
+  padding: 0 1.875rem 0 1.125rem; /* Gunakan rem untuk padding */
 }
 
 .navbar-logo {
@@ -52,30 +53,49 @@ body {
 }
 
 .navbar-item {
-  margin-right: 20px;
-  margin-top: 2px;
+  margin-right: 1.25rem;
+  margin-top: 0.125rem;
   position: relative;
 }
 
 .navbar-link {
   color: #fffffffe;
   text-decoration: none;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  margin-right: 10px;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  margin-right: 0.625rem;
+  padding: 0.625rem 0.9375rem;
+  transition: all 0.3s ease; /* Mengaplikasikan efek transisi ke semua properti */
+  position: relative;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px; /* Ketebalan garis bawah */
+  background-color: #ef4b3c;
+  transition: width 0.3s ease; /* Efek transisi hanya pada lebar */
+  transform: translateX(-50%); /* Pusatkan pada horizontal */
+}
+
+.navbar-link:hover::before {
+  width: 100%; /* Perbesar lebar saat dihover */
 }
 
 .navbar-link:hover {
-  background-color: #ef4b3c;
-  border-radius: 20px;
-  transform: scale(1.05);
+  transform: scale(0.95); /* Sedikit menyusut saat dihover */
   color: yellow;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Efek shadow saat dihover */
+}
+
+.navbar-link.active {
+  color: yellow; /* Warna kuning untuk link halaman aktif */
 }
 
 .content {
-  max-width: 800px;
-  margin: 100px auto 50px;
+  max-width: 50rem;
+  margin: 6.25rem auto 3.125rem;
   text-align: center;
 }
 
@@ -87,12 +107,12 @@ body {
 }
 
 .menu-icon-line {
-  width: 25px;
-  height: 3px;
+  width: 1.5625rem;
+  height: 0.1875rem;
   background-color: #f2f2f2d8;
-  margin: 4px 0;
+  margin: 0.25rem 0;
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .menu-icon:hover .menu-icon-line {
@@ -113,12 +133,12 @@ body {
   }
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 1000px) { 
   .navbar-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 68.5px;
+    top: 4.28125rem;
     left: 0;
     width: 100%;
     background-color: #1c1c1c;
@@ -133,15 +153,13 @@ body {
   .navbar-item {
     margin: 0;
     text-align: center;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 5px;
+    padding: 0.3125rem 1.25rem 0.625rem;
   }
 
   .navbar-link {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     display: block;
-    margin-right: 80px;
+    margin-right: 5rem;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
@@ -163,7 +181,7 @@ body {
   .navbar-link:hover::before {
     width: 200%;
     transition: width 0.5s ease;
-    border-radius: 20px;
+    border-radius: 1.25rem;
   }
   
   .navbar-link:hover {
@@ -176,5 +194,36 @@ body {
     display: flex;
     overflow: visible;
     z-index: 1;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar-container {
+    padding: 0 0.9375rem;
+  }
+  
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-link {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar-logo {
+    margin-bottom: 0.625rem;
+  }
+  
+  .navbar-item {
+    width: 100%;
+    text-align: left;
   }
 }
