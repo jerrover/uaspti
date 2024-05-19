@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-.backgroundya{
+.backgroundya {
     background-color: #F8F4E1;
     padding: 30px 5px 45px;
 }
@@ -47,12 +47,13 @@ body {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     padding: 5px;
     flex-grow: 1;
 }
+
 .destination-category-bubble:hover {
-    transition: scale(1.1);
+    transform: scale(1.1);
     filter: grayscale(30%);
 }
 
@@ -93,6 +94,6 @@ body {
 
     .destination-category-bubble {
         width: calc(100% - 40px);
-        font-size: clamp(2rem, 4vw, 40px); /* Sesuaikan dengan ukuran font yang sesuai */
+        font-size: clamp(2rem, 4vw, 40px); 
     }
 }

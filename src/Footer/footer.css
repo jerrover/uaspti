@@ -1,4 +1,3 @@
-/* Import font Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 .footer {
@@ -7,31 +6,31 @@
   padding: 20px 0;
   width: 100%;
   margin-top: auto;
-  text-align: left; /* Mengubah teks agar rata kiri */
-  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
-  font-size: 1rem; /* Mengatur ukuran font default */
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Menambahkan padding untuk memberikan ruang pada layar yang lebih kecil */
+  padding: 0 20px;
 }
 
 .footer-navigation {
   margin-top: 20px;
   display: flex;
-  flex-direction: row; /* Menjaga arah flex menjadi horizontal */
-  gap: 20px; /* Mengatur jarak antara link */
-  flex-wrap: nowrap; /* Mencegah flex item melipat ke baris baru */
-  overflow-x: auto; /* Menambahkan scroll horizontal jika konten terlalu lebar untuk layar kecil */
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .footer-link {
   text-decoration: none;
-  color: #fff; /* atau warna lain sesuai desain */
+  color: #fff;
   padding: 5px 0;
-  position: relative; /* Menambahkan posisi relatif untuk penggunaan pseudo-element */
+  position: relative;
   font-weight: bolder;
 }
 
@@ -41,55 +40,55 @@
   bottom: 0;
   left: 50%;
   width: 0%;
-  height: 1px; /* Ketebalan garis bawah */
-  background-color: transparent; /* Warna garis bawah transparan pada awalnya */
-  transition: width 0.3s ease, background-color 0.3s ease; /* Efek transisi untuk lebar dan warna */
-  transform: translateX(-50%); /* Pusatkan pada horizontal */
+  height: 1px;
+  background-color: transparent;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .footer-link:hover::before {
-  width: 100%; /* Perbesar lebar saat dihover */
-  background-color: #ff0000; /* Warna garis bawah menjadi merah saat dihover */
+  width: 100%;
+  background-color: #ff0000;
 }
 
 .footer-link:hover {
-  color: #ffd700; /* Warna font menjadi kuning saat dihover */
+  color: #ffd700;
 }
 
 @media (max-width: 768px) {
   .footer {
-    font-size: 0.85rem; /* Mengurangi ukuran font untuk seluruh footer pada layar yang lebih kecil */
+    font-size: 0.85rem;
   }
 
   .footer-content {
-    padding: 0 10px; /* Mengurangi padding pada layar yang lebih kecil */
+    padding: 0 10px;
   }
 
   .footer-navigation {
-    gap: 10px; /* Mengurangi jarak antar link pada layar yang lebih kecil */
+    gap: 10px;
   }
 
   .footer-link {
-    padding: 5px 0; /* Menjaga padding tetap kecil untuk sentuhan yang lebih mudah pada layar kecil */
+    padding: 5px 0;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    text-align: left; /* Mengubah teks agar tetap rata kiri pada layar yang sangat kecil */
-    font-size: 0.75rem; /* Mengurangi ukuran font lebih lanjut untuk seluruh footer pada layar yang sangat kecil */
+    text-align: left;
+    font-size: 0.75rem;
   }
 
   .footer-content {
-    padding: 0 5px; /* Mengurangi padding lebih lanjut pada layar yang sangat kecil */
+    padding: 0 5px;
   }
 
   .footer-navigation {
-    justify-content: flex-start; /* Menyesuaikan link agar rata kiri */
-    gap: 5px; /* Mengurangi jarak antar link pada layar yang sangat kecil */
+    justify-content: flex-start;
+    gap: 5px;
   }
 
   .footer-link {
-    padding: 3px 0; /* Mengurangi padding lebih lanjut pada layar sangat kecil */
+    padding: 3px 0;
   }
 }
