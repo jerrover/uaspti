@@ -17,7 +17,7 @@ const Card = ({ name, imgURL, desc, email, instagram }) => {
       </div>
       <div className="about-card-footer">
         <p className="desc">{desc}</p>
-        <a href={`mailto:${email}`}>{email}</a>
+        <p>Email: <a className="email-link" href={`mailto:${email}`}>{email}</a></p>
         <div className="about-social-icons">
           <a href={instagram} onClick={handleInstagramClick}>
             <img className="about-card-logo" src={iglogo} alt="Instagram" />
