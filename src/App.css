@@ -1,15 +1,16 @@
 /* App.css */
-body, #root {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-image: url('./Assets/Background/background.jpg'); /* Path ke gambar background */
-  background-size: cover; /* Menutupi seluruh area */
-  background-repeat: no-repeat; /* Tidak mengulang */
-  background-attachment: fixed; /* Background tetap di tempat saat di-scroll */
-  background-position: center; /* Memposisikan gambar di tengah */
-  }
+  background-image: url(''); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center; 
+  overflow-x: hidden;
+}
 
 .app {
   display: flex;

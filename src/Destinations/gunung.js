@@ -17,7 +17,6 @@ export function WisataGunungList() {
     <div> 
       <WisataJudul />
       <Mininav />
-      <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto"/>
         <div className="wisata-info">  
@@ -72,7 +71,7 @@ export function WisataGunungList() {
 const backgroundImageUrl = "https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/events/2021/03/02/88d40aa2-715d-46fa-8a14-c93197c63987-1614692773842-c2806f604d37eb77321ad126cf294dec.jpg";
 
 function WisataJudul () {
-  return <h1 className="wisata-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Gunung</h1>;
+  return <h1 className="wisata-container " style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Gunung</h1>;
 }
 
 export default WisataGunungList;

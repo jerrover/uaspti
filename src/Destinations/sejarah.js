@@ -39,7 +39,6 @@ export function WisataBersejarah() {
     <div>
       <WisataJudul />
       <Mininav />
-      <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto" />
         <div className="wisata-info">

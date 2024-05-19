@@ -1,4 +1,3 @@
-// Di dalam file fotoList.js
 import React from "react";
 import "./wisata.css";
 import foto1 from "../Assets/Destinations/Air Terjun/Air Terjun Jumog/air-terjun-jumog-karanganyar.jpg";
@@ -14,7 +13,6 @@ export function WisataAirTerjun() {
     <div>
       <WisataJudul />
       <Mininav />
-      <hr />
       <div className="wisata-content">
         <img src={foto1} className="wisata-foto"/>
       <div className="wisata-info">  
@@ -75,18 +73,6 @@ const backgroundImageUrl = "https://ik.imagekit.io/tvlk/blog/2022/11/Air-Terjun-
 
 function WisataJudul () {
   return <h1 className="wisata-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>Air Terjun</h1>;
-}
-
-function WisataFotoInfo({ src, judul, teks }) {
-  return (
-    <div className="wisata-content">
-      <img src={src} className="wisata-foto" alt={judul} />
-      <div className="wisata-info">
-        <h2>{judul}</h2>
-        <p>{teks}</p>
-      </div>
-    </div>
-  );
 }
 
 export default WisataAirTerjun;

@@ -2,10 +2,16 @@ body {
     margin: 0px;
 }
 
+.backgroundya{
+    background-color: #F8F4E1;
+    padding: 30px 5px 45px;
+}
+
 .destination-category-title {
     text-align: center;
     font-family: "poppins", serif;
-    color: black;
+    color: #543310;
+    text-shadow: 3px 3px 2px #AF8F6F;
     font-weight: bolder;
     font-size: 50px;
 }
@@ -13,39 +19,41 @@ body {
 .destination-category-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Mengubah justify-content menjadi center */
+    justify-content: center; 
     align-items: center;
     padding: 20px;
 }
 
 .destination-category-bubble {
     position: relative;
-    filter: grayscale(100%);
+    filter: grayscale(85%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 180px;
-    height: 300px;
+    height: 285px;
     margin: 10px;
-    font-size: 32px;
+    font-size: clamp(0.5rem, 2.3vw, 35px);
+    letter-spacing: 1px;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     font-weight: 775;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.705);
     text-align: center;
-    color: white;
+    color: #F8F4E1;
+    text-shadow: 3px 3px 2px #543310;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
-    padding: 10px;
+    padding: 5px;
     flex-grow: 1;
 }
-
 .destination-category-bubble:hover {
     transform: scale(1.1);
-    filter: grayscale(0%);
+    filter: grayscale(30%);
 }
 
 .destination-category-bubble:nth-child(1) {
@@ -72,10 +80,10 @@ body {
 @media (max-width: 768px) {
     .destination-category-list {
         flex-direction: column;
-        align-items: center; /* Mengubah align-items menjadi center */
+        align-items: center;
     }
 
     .destination-category-bubble {
-        width: calc(100% - 40px); /* Mengurangi width agar tidak menempel di sisi */
+        width: calc(100% - 40px); 
     }
 }

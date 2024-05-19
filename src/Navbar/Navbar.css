@@ -12,7 +12,7 @@ body {
   background-color: #000000;
   box-shadow: 1px 0px 3px black;
   color: #fff;
-  padding: 8px 6px 8px 11px;
+  padding: 8px 11px 8px 11px;
   z-index: 999;
   position: fixed;
   width: 100vw;
@@ -24,7 +24,7 @@ body {
   width: auto;
   height: 50px;
   padding-top: 10px;
-  margin-left: -20px;
+  margin-left: 0px;
   z-index: 4;
 }
 
@@ -34,7 +34,7 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px 0 18px;
+  padding: 0 10px 0 18px;
 }
 
 .navbar-logo {
@@ -42,6 +42,7 @@ body {
   color: #fff;
   text-decoration: none;
   z-index: 1;
+  margin-left: -20px;
 }
 
 .navbar-menu {
@@ -52,17 +53,22 @@ body {
 }
 
 .navbar-item {
-  margin-right: 20px;
+  margin-right: 10px;
   margin-top: 2px;
   position: relative;
 }
 
 .navbar-link {
-  color: #fffffffe;
+  color: #F8F4E1;
   text-decoration: none;
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  margin-right: 10px;
+  margin-right: 5px;
   padding: 10px 15px;
+  font-size: clamp(0.77rem, 0.90vw, 1.4rem);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
@@ -90,7 +96,7 @@ body {
   width: 25px;
   height: 3px;
   background-color: #f2f2f2d8;
-  margin: 4px 0;
+  margin: 4px 5vw 4px 5vw;
   transition: all 0.3s ease;
   border-radius: 2px;
 }

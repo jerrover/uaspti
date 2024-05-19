@@ -26,7 +26,7 @@ const DestinationCategoryList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="backgroundya" >
       <h1 className="destination-category-title" data-aos="fade-up">Kategori Wisata</h1>
       <div className="destination-category-list">
         {categories.map((category) => (

@@ -4,15 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
+  justify-content: center;
   padding: 20px;
   margin: 30px;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 30px;
-  box-shadow: 5px 5px 15px;
+  border-radius: 18px;
+  box-shadow: 2px 2px 5px #543310;
+  border: 2px solid #543310;
+  background-color: #efece1;
 }
-
 
 .map-container {
   margin-top: 20px;
@@ -25,45 +24,42 @@
 }
 
 .wisata-container {
-  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(30%);
+  padding: 40px 60px;
   margin: 0;
   background-size: cover;
-  color: #ffffff;
-  font-size: 10vw; 
+  background-position: center;
+  color: #F8F4E1;
+  text-shadow: 3px 3px 4px #543310;
+  font-size: clamp(8vh, 10vh, 1rem);
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 600px) {
-  .wisata-container {
-    font-size: 8vw; /* Menyesuaikan ukuran font untuk layar lebih kecil */
-  }
-}
-
-@media (max-width: 400px) {
-  .wisata-container {
-    font-size: 6vw; /* Menyesuaikan ukuran font untuk layar yang lebih kecil */
-  }
-}
 
 @media (max-width: 768px) {
   .wisata-container {
-    padding: 10vw;
+    padding: 6vw 8vw;
   }
 }
 
 @media (max-width: 480px) {
   .wisata-container {
-    padding: 7vw;
+    padding: 6vw 8vw;
   }
 }
 
 .wisata-foto {
   width: 250px;
-  height: 350px;
+  height: 380px;
   object-fit: cover;
   border-radius: 20px;
-  margin: 10px 10px 10px 10px;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   box-shadow: 5px 5px 15px #000;
 }
 
@@ -87,8 +83,8 @@
 
 @media (max-width: 768px) {
   .wisata-foto {
-    width: 250px;
-    height: 250px;
+    width: 80%;
+    height: auto;
   }
 }
 
