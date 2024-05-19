@@ -1,12 +1,12 @@
 .about-card {
-  width: 300px;
+  width: 310px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 10px; 
+  margin: 8px 8px;
   padding: 20px;
   display: inline-block;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -14,16 +14,15 @@
 .about-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
   margin: 0 auto;
 }
 
-
 .about-us {
   text-align: center;
-  font-family: "poppins", serif;
+  font-family: "Poppins", serif;
   font-weight: lighter;
-  font-size: 40pt;
+  font-size: 40pt; /* Slightly smaller font size */
   color: black;
 }
 
@@ -48,11 +47,15 @@
 
 .about-card-body p {
   margin: 5px 0;
+  font-family: "Poppins", serif;
+  font-size: 10pt; /* Slightly smaller font size */
 }
 
 .about-card-body a {
   text-decoration: none;
   color: #007bff;
+  font-family: "Poppins", serif;
+  font-size: 10pt; /* Slightly smaller font size */
 }
 
 .about-card-footer {
@@ -71,20 +74,22 @@
 
 .about-card-image h3 {
   margin: 10px 0;
-  font-family: "poppins", serif;
+  font-family: "Poppins", serif;
   font-weight: bolder;
-  font-size: 24pt;
+  font-size: 20pt; /* Slightly smaller font size */
 }
 
 .about-card-footer p,
 .about-card-footer a {
   margin: 5px 0;
+  font-family: "Poppins", serif;
+  font-size: 10pt; /* Slightly smaller font size */
 }
 
 .desc {
-  font-family: "poppins", serif;
+  font-family: "Poppins", serif;
   color: black;
-  font-size: 12pt;
+  font-size: 10pt; /* Slightly smaller font size */
 }
 
 .about-social-icons {
@@ -98,6 +103,8 @@
 
 h3 {
   color: black;
+  font-family: "Poppins", serif;
+  font-size: 20pt; /* Slightly smaller font size */
 }
 
 .about-card-body {
@@ -117,4 +124,9 @@ h3 {
 
 .about-card-logo:hover {
   opacity: 0.8;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
 }

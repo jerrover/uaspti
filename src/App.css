@@ -1,28 +1,21 @@
-/* App.css */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100vw;
   margin: 0;
-  background-image: url(''); 
-  background-size: cover; 
-  background-repeat: repeat; 
-  background-attachment: fixed; 
-  background-position: center; 
-  background-image: url('./Assets/Background/7.png');
   overflow-x: hidden;
 }
-@media (max-width: 768px) {
-  body {
-      background-size: contain;  /* Menyesuaikan ukuran gambar dengan tetap menjaga rasio aspek */
-      background-attachment: scroll;  /* Membuat gambar bergerak saat halaman di-scroll */
-  }
-}
-
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ubah dari flex-grow: 1; menjadi min-height: 100vh; */
+  min-height: 100vh;
+  background-image: url('./Assets/Background/7.png');
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-size: contain;  
+  background-attachment: scroll;   
+  background-position: center; 
 }
 
 .main-content {
@@ -31,5 +24,5 @@ body {
 }
 
 .footer {
-  margin-top: auto; /* Menarik footer ke bagian bawah */
+  margin-top: auto; 
 }
