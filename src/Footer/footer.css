@@ -1,3 +1,6 @@
+/* Import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .footer {
   background-color: #0c0c0c;
   color: #fff;
@@ -5,11 +8,14 @@
   width: 100%;
   margin-top: auto;
   text-align: left; /* Mengubah teks agar rata kiri */
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  font-size: 1rem; /* Mengatur ukuran font default */
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Menambahkan padding untuk memberikan ruang pada layar yang lebih kecil */
 }
 
 .footer-navigation {
@@ -17,16 +23,73 @@
   display: flex;
   flex-direction: row; /* Menjaga arah flex menjadi horizontal */
   gap: 20px; /* Mengatur jarak antara link */
+  flex-wrap: nowrap; /* Mencegah flex item melipat ke baris baru */
+  overflow-x: auto; /* Menambahkan scroll horizontal jika konten terlalu lebar untuk layar kecil */
 }
 
 .footer-link {
   text-decoration: none;
   color: #fff; /* atau warna lain sesuai desain */
   padding: 5px 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
+  position: relative; /* Menambahkan posisi relatif untuk penggunaan pseudo-element */
+  font-weight: bolder;
+}
+
+.footer-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px; /* Ketebalan garis bawah */
+  background-color: transparent; /* Warna garis bawah transparan pada awalnya */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Efek transisi untuk lebar dan warna */
+  transform: translateX(-50%); /* Pusatkan pada horizontal */
+}
+
+.footer-link:hover::before {
+  width: 100%; /* Perbesar lebar saat dihover */
+  background-color: #ff0000; /* Warna garis bawah menjadi merah saat dihover */
 }
 
 .footer-link:hover {
-  border-bottom: 1px solid #fff; /* atau warna lain sesuai desain */
+  color: #ffd700; /* Warna font menjadi kuning saat dihover */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.85rem; /* Mengurangi ukuran font untuk seluruh footer pada layar yang lebih kecil */
+  }
+
+  .footer-content {
+    padding: 0 10px; /* Mengurangi padding pada layar yang lebih kecil */
+  }
+
+  .footer-navigation {
+    gap: 10px; /* Mengurangi jarak antar link pada layar yang lebih kecil */
+  }
+
+  .footer-link {
+    padding: 5px 0; /* Menjaga padding tetap kecil untuk sentuhan yang lebih mudah pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    text-align: left; /* Mengubah teks agar tetap rata kiri pada layar yang sangat kecil */
+    font-size: 0.75rem; /* Mengurangi ukuran font lebih lanjut untuk seluruh footer pada layar yang sangat kecil */
+  }
+
+  .footer-content {
+    padding: 0 5px; /* Mengurangi padding lebih lanjut pada layar yang sangat kecil */
+  }
+
+  .footer-navigation {
+    justify-content: flex-start; /* Menyesuaikan link agar rata kiri */
+    gap: 5px; /* Mengurangi jarak antar link pada layar yang sangat kecil */
+  }
+
+  .footer-link {
+    padding: 3px 0; /* Mengurangi padding lebih lanjut pada layar sangat kecil */
+  }
 }
