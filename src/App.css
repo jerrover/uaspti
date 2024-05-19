@@ -5,10 +5,17 @@ body {
   margin: 0;
   background-image: url(''); 
   background-size: cover; 
-  background-repeat: no-repeat; 
+  background-repeat: repeat; 
   background-attachment: fixed; 
   background-position: center; 
+  background-image: url('./Assets/Background/7.png');
   overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  body {
+      background-size: contain;  
+      background-attachment: scroll;  
+  }
 }
 
 .app {
@@ -23,5 +30,5 @@ body {
 }
 
 .footer {
-  margin-top: auto; /* Menarik footer ke bagian bawah */
+  margin-top: auto; 
 }
