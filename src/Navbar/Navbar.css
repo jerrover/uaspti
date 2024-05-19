@@ -145,11 +145,7 @@
   .navbar-item {
     margin: 0;
     text-align: center;
-<<<<<<< HEAD
-    padding-right: 20px;
-=======
     padding-right: 10px; /* Mengurangi padding kanan */
->>>>>>> 5fe220741847ee623811593d221b3790622c1a7b
     padding-bottom: 10px;
     padding-top: 5px;
   }
