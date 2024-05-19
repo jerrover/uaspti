@@ -15,10 +15,14 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  min-height: 100vh; /* Ubah dari flex-grow: 1; menjadi min-height: 100vh; */
 }
 
 .main-content {
   flex-grow: 1;
   padding-top: 85px;
+}
+
+.footer {
+  margin-top: auto; /* Menarik footer ke bagian bawah */
 }

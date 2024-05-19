@@ -1,18 +1,9 @@
-body {
-  font-family: "poppins", serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100vw;
-  background-color: #f2f2f2;
-}
-
 .navbar {
   font-family: "Cinzel Decorative", serif;
   background-color: #000000;
   box-shadow: 1px 0px 3px black;
   color: #fff;
-  padding: 8px 11px 8px 11px;
+  padding: 8px 6px 8px 11px;
   z-index: 999;
   position: fixed;
   width: 100vw;
@@ -24,7 +15,7 @@ body {
   width: auto;
   height: 50px;
   padding-top: 10px;
-  margin-left: 0px;
+  margin-left: -20px;
   z-index: 4;
 }
 
@@ -38,7 +29,7 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px 0 18px;
+  padding: 0 30px 0 18px;
 }
 
 .navbar-logo {
@@ -57,31 +48,42 @@ body {
 }
 
 .navbar-item {
-  margin-right: 10px;
+  margin-right: 20px;
   margin-top: 2px;
   position: relative;
 }
 
 .navbar-link {
-  color: #F8F4E1;
+  color: #fffffffe; /* Mengubah warna teks */
   text-decoration: none;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  margin-right: 5px;
+  margin-right: 10px;
   padding: 10px 15px;
-  font-size: clamp(0.77rem, 0.90vw, 1.4rem);
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  position: relative; /* Tambahkan posisi relatif untuk garis bawah */
 }
 
 .navbar-link:hover {
-  background-color: #ef4b3c;
-  border-radius: 20px;
+  color: yellow; /* Mengubah warna teks menjadi kuning saat hover */
+  z-index: 1;
   transform: scale(1.05);
-  color: yellow;
 }
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Mengubah posisi dari top menjadi bottom */
+  left: 0;
+  width: 100%; /* Mengisi seluruh lebar */
+  height: 2px; /* Mengatur tinggi garis bawah */
+  background-color: red; /* Mengubah warna garis bawah menjadi merah */
+  transform: scaleX(0); /* Awalnya tidak terlihat */
+  transition: transform 0.3s ease; /* Animasi saat muncul */
+}
+
+.navbar-link:hover::before {
+  transform: scaleX(1); /* Munculkan garis bawah saat hover */
+}
+
 
 .content {
   max-width: 800px;
@@ -100,7 +102,7 @@ body {
   width: 25px;
   height: 3px;
   background-color: #f2f2f2d8;
-  margin: 4px 5vw 4px 5vw;
+  margin: 4px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -123,7 +125,7 @@ body {
   }
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 1000px) {
   .navbar-menu {
     display: none;
     flex-direction: column;
@@ -143,19 +145,19 @@ body {
   .navbar-item {
     margin: 0;
     text-align: center;
-    padding-right: 20px;
+    padding-right: 10px; /* Mengurangi padding kanan */
     padding-bottom: 10px;
     padding-top: 5px;
   }
 
   .navbar-link {
-    padding: 10px 15px;
+    padding: 10px 5px; /* Mengurangi padding horizontal */
     display: block;
-    margin-right: 80px;
+    margin-right: 40px; /* Mengurangi margin kanan */
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
-    white-space: nowrap; 
+    white-space: nowrap; /* Mencegah teks terputus di tengah */
   }
 
   .navbar-link::before {
@@ -181,10 +183,92 @@ body {
   }
   
   .menu-icon {
-    display: flex; 
+    display: flex; /* Menampilkan menu icon */
     flex-direction: column;
     cursor: pointer;
     position: relative;
     z-index: 1;
   }
+
+  .menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: #f2f2f2d8;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .menu-icon:hover .menu-icon-line {
+    background-color: #c49b06;
+    transform: scale(1.1);
+  }
 }
+@media screen and (max-width: 815px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68.5px;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    z-index: 999;
+    animation: slideFromTop ease 0.5s forwards;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 0;
+    text-align: center;
+    padding-right: 10px; /* Mengurangi padding kanan */
+    padding-bottom: 10px;
+    padding-top: 5px;
+  }
+
+  .navbar-link {
+    padding: 10px 5px; /* Mengurangi padding horizontal */
+    display: block;
+    margin-right: 40px; /* Mengurangi margin kanan */
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Mencegah teks terputus di tengah */
+  }
+
+  .navbar-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .menu-icon {
+    display: flex; /* Menampilkan menu icon */
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: #f2f2f2d8;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .menu-icon:hover .menu-icon-line {
+    background-color: #c49b06;
+    transform: scale(1.1);
+  }
+}
+
