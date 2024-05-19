@@ -52,8 +52,16 @@ body {
     flex-grow: 1;
 }
 .destination-category-bubble:hover {
-    transform: scale(1.1);
+    transition: scale(1.1);
     filter: grayscale(30%);
+}
+
+.destination-category-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
 }
 
 .destination-category-bubble:nth-child(1) {
