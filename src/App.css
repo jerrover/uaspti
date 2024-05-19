@@ -6,10 +6,17 @@ body {
   margin: 0;
   background-image: url(''); 
   background-size: cover; 
-  background-repeat: no-repeat; 
+  background-repeat: repeat; 
   background-attachment: fixed; 
   background-position: center; 
+  background-image: url('./Assets/Background/7.png');
   overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  body {
+      background-size: contain;  /* Menyesuaikan ukuran gambar dengan tetap menjaga rasio aspek */
+      background-attachment: scroll;  /* Membuat gambar bergerak saat halaman di-scroll */
+  }
 }
 
 .app {
