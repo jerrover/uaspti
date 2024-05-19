@@ -4,19 +4,18 @@ body {
   min-height: 100vh;
   width: 100vw;
   margin: 0;
-  background-image: url(''); 
+  overflow-x: hidden;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('./Assets/Background/7.png');
+  background-size: cover; 
   background-repeat: repeat; 
   background-size: contain;  
   background-attachment: scroll;   
   background-position: center; 
-  background-image: url('./Assets/Background/7.png');
-  overflow-x: hidden;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
 }
 
 .main-content {
