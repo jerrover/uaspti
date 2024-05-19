@@ -13,7 +13,7 @@ const categories = [
 
 const DestinationCategoryBubble = ({ category }) => {
   return (
-    <Link to={`/destination/${category.link}`} className="destination-category-bubble" data-aos="fade-up">
+    <Link to={`/destination/${category.link}`} className="destination-category-bubble" data-aos="zoom-in">
       <span className="destination-category-name1">{category.name1}</span>
       {category.name2 && <span className="destination-category-name2">{category.name2}</span>}
     </Link>
@@ -27,7 +27,7 @@ const DestinationCategoryList = () => {
 
   return (
     <div>
-      <h1 className="destination-category-title" data-aos="fade-down">Kategori Wisata</h1>
+      <h1 className="destination-category-title" data-aos="fade-up">Kategori Wisata</h1>
       <div className="destination-category-list">
         {categories.map((category) => (
           <DestinationCategoryBubble key={category.id} category={category} />
