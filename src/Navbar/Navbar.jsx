@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation dari react-router-dom
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logojateng from '../Assets/logo/LOGO DEWI JATENG.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); // Gunakan useLocation untuk mendapatkan informasi lokasi halaman
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

@@ -1,19 +1,9 @@
-body {
-  font-family: "poppins", serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100vw;
-  background-color: #f2f2f2;
-  font-size: 1rem;
-}
-
 .navbar {
   font-family: "Cinzel Decorative", serif;
   background-color: #000000;
   box-shadow: 1px 0px 3px black;
   color: #fff;
-  padding: 0.75rem 1rem;
+  padding: 8px 6px 8px 11px;
   z-index: 999;
   position: fixed;
   width: 100vw;
@@ -23,19 +13,23 @@ body {
 
 .logojateng {
   width: auto;
-  height: 3rem; /* Sesuaikan dengan rem */
-  padding-top: 0.625rem;
-  margin-left: -1.25rem;
+  height: 50px;
+  padding-top: 10px;
+  margin-left: -20px;
   z-index: 4;
+}
+
+.navbar-link.active {
+  color: yellow;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 75rem; /* Gunakan rem untuk max-width */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.875rem 0 1.125rem; /* Gunakan rem untuk padding */
+  padding: 0 30px 0 18px;
 }
 
 .navbar-logo {
@@ -53,49 +47,46 @@ body {
 }
 
 .navbar-item {
-  margin-right: 1.25rem;
-  margin-top: 0.125rem;
+  margin-right: 20px;
+  margin-top: 2px;
   position: relative;
 }
 
 .navbar-link {
-  color: #fffffffe;
+  color: #fffffffe; /* Mengubah warna teks */
   text-decoration: none;
-  margin-right: 0.625rem;
-  padding: 0.625rem 0.9375rem;
-  transition: all 0.3s ease; /* Mengaplikasikan efek transisi ke semua properti */
-  position: relative;
+  margin-right: 10px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  position: relative; /* Tambahkan posisi relatif untuk garis bawah */
+}
+
+.navbar-link:hover {
+  color: yellow; /* Mengubah warna teks menjadi kuning saat hover */
+  z-index: 1;
+  transform: scale(1.05);
 }
 
 .navbar-link::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  height: 2px; /* Ketebalan garis bawah */
-  background-color: #ef4b3c;
-  transition: width 0.3s ease; /* Efek transisi hanya pada lebar */
-  transform: translateX(-50%); /* Pusatkan pada horizontal */
+  bottom: 0; /* Mengubah posisi dari top menjadi bottom */
+  left: 0;
+  width: 100%; /* Mengisi seluruh lebar */
+  height: 2px; /* Mengatur tinggi garis bawah */
+  background-color: red; /* Mengubah warna garis bawah menjadi merah */
+  transform: scaleX(0); /* Awalnya tidak terlihat */
+  transition: transform 0.3s ease; /* Animasi saat muncul */
 }
 
 .navbar-link:hover::before {
-  width: 100%; /* Perbesar lebar saat dihover */
+  transform: scaleX(1); /* Munculkan garis bawah saat hover */
 }
 
-.navbar-link:hover {
-  transform: scale(0.95); /* Sedikit menyusut saat dihover */
-  color: yellow;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Efek shadow saat dihover */
-}
-
-.navbar-link.active {
-  color: yellow; /* Warna kuning untuk link halaman aktif */
-}
 
 .content {
-  max-width: 50rem;
-  margin: 6.25rem auto 3.125rem;
+  max-width: 800px;
+  margin: 100px auto 50px;
   text-align: center;
 }
 
@@ -107,12 +98,12 @@ body {
 }
 
 .menu-icon-line {
-  width: 1.5625rem;
-  height: 0.1875rem;
+  width: 25px;
+  height: 3px;
   background-color: #f2f2f2d8;
-  margin: 0.25rem 0;
+  margin: 4px 0;
   transition: all 0.3s ease;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .menu-icon:hover .menu-icon-line {
@@ -133,12 +124,12 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) { 
+@media screen and (max-width: 1000px) {
   .navbar-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 4.28125rem;
+    top: 68.5px;
     left: 0;
     width: 100%;
     background-color: #1c1c1c;
@@ -153,18 +144,21 @@ body {
   .navbar-item {
     margin: 0;
     text-align: center;
-    padding: 0.3125rem 1.25rem 0.625rem;
+    padding-right: 10px; /* Mengurangi padding kanan */
+    padding-bottom: 10px;
+    padding-top: 5px;
   }
 
   .navbar-link {
-    padding: 0.625rem 0.9375rem;
+    padding: 10px 5px; /* Mengurangi padding horizontal */
     display: block;
-    margin-right: 5rem;
+    margin-right: 40px; /* Mengurangi margin kanan */
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Mencegah teks terputus di tengah */
   }
-  
+
   .navbar-link::before {
     content: "";
     position: absolute;
@@ -172,58 +166,96 @@ body {
     left: 50%;
     width: 0;
     height: 100%;
-    background-color: #ef4b3c;
-    transition: width 0.3s ease;
-    transform: translate(-50%, -50%);
     z-index: -1;
   }
-  
-  .navbar-link:hover::before {
-    width: 200%;
-    transition: width 0.5s ease;
-    border-radius: 1.25rem;
-  }
-  
-  .navbar-link:hover {
-    z-index: 1;
-    transform: scale(1.05);
-    color: yellow;
-  }
-  
+
   .menu-icon {
-    display: flex;
-    overflow: visible;
+    display: flex; /* Menampilkan menu icon */
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
     z-index: 1;
   }
+
+  .menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: #f2f2f2d8;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .menu-icon:hover .menu-icon-line {
+    background-color: #c49b06;
+    transform: scale(1.1);
+  }
 }
-
-
-@media screen and (max-width: 600px) {
-  .navbar-container {
-    padding: 0 0.9375rem;
-  }
-  
-  .navbar-logo {
-    font-size: 1.2rem;
-  }
-  
-  .navbar-link {
-    padding: 0.5rem 0.75rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .navbar-container {
+@media screen and (max-width: 815px) {
+  .navbar-menu {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .navbar-logo {
-    margin-bottom: 0.625rem;
-  }
-  
-  .navbar-item {
+    position: absolute;
+    top: 68.5px;
+    left: 0;
     width: 100%;
-    text-align: left;
+    background-color: #1c1c1c;
+    z-index: 999;
+    animation: slideFromTop ease 0.5s forwards;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 0;
+    text-align: center;
+    padding-right: 10px; /* Mengurangi padding kanan */
+    padding-bottom: 10px;
+    padding-top: 5px;
+  }
+
+  .navbar-link {
+    padding: 10px 5px; /* Mengurangi padding horizontal */
+    display: block;
+    margin-right: 40px; /* Mengurangi margin kanan */
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Mencegah teks terputus di tengah */
+  }
+
+  .navbar-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .menu-icon {
+    display: flex; /* Menampilkan menu icon */
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: #f2f2f2d8;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .menu-icon:hover .menu-icon-line {
+    background-color: #c49b06;
+    transform: scale(1.1);
   }
 }
+
