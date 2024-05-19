@@ -4,27 +4,25 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-image: url(''); 
+  overflow-x: hidden;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('./Assets/Background/7.png');
   background-size: cover; 
   background-repeat: repeat; 
   background-attachment: fixed; 
   background-position: center; 
-  background-image: url('./Assets/Background/7.png');
-  overflow-x: hidden;
 }
+
 @media (max-width: 768px) {
-  body {
+  .app {
       background-size: contain;  
       background-attachment: scroll;  
   }
 }
-
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-}
-
 .main-content {
   flex-grow: 1;
   padding-top: 85px;
