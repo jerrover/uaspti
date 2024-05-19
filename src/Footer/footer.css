@@ -31,13 +31,29 @@
   text-decoration: none;
   color: #fff; /* atau warna lain sesuai desain */
   padding: 5px 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
-  white-space: nowrap; /* Mencegah teks link melipat ke baris baru */
+  position: relative; /* Menambahkan posisi relatif untuk penggunaan pseudo-element */
+  font-weight: bolder;
+}
+
+.footer-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px; /* Ketebalan garis bawah */
+  background-color: transparent; /* Warna garis bawah transparan pada awalnya */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Efek transisi untuk lebar dan warna */
+  transform: translateX(-50%); /* Pusatkan pada horizontal */
+}
+
+.footer-link:hover::before {
+  width: 100%; /* Perbesar lebar saat dihover */
+  background-color: #ff0000; /* Warna garis bawah menjadi merah saat dihover */
 }
 
 .footer-link:hover {
-  border-bottom: 1px solid #fff; /* atau warna lain sesuai desain */
+  color: #ffd700; /* Warna font menjadi kuning saat dihover */
 }
 
 @media (max-width: 768px) {
