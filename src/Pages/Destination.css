@@ -85,5 +85,6 @@ body {
 
     .destination-category-bubble {
         width: calc(100% - 40px); 
+        font-size: clamp(1rem, 10vw, 30px);
     }
 }
