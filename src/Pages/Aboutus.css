@@ -30,7 +30,7 @@
     margin: 10px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1.5s ease;
     margin-top: 50px;
   }
   

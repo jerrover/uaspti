@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./Extras.css";
 
 // Import local images
@@ -38,6 +40,10 @@ const Extras = () => {
   const [extraLoading, setExtraLoading] = useState(false);
   const [sortBy, setSortBy] = useState("");
   const [cityImage, setCityImage] = useState(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   useEffect(() => {
     if (extraSearchTerm) {
@@ -98,7 +104,7 @@ const Extras = () => {
 
   return (
     <div className="extra-container">
-      <h1 className="extra-heading">Image Search & Weather App</h1>
+      <h1 className="extra-heading" data-aos="fade-in">Image Search & Weather App</h1>
       <form className="extra-form" onSubmit={handleExtraImageFormSubmit}>
         <input
           type="text"
@@ -106,9 +112,10 @@ const Extras = () => {
           onChange={(e) => setExtraSearchTerm(e.target.value)}
           placeholder="Enter search term"
           className="extra-input"
+          data-aos="fade-in"
         />
-        <button type="submit" className="extra-button">Search Images</button>
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="extra-select">
+        <button type="submit" className="extra-button" data-aos="fade-in">Search Images</button>
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="extra-select" data-aos="fade-in">
           <option value="">Sort by</option>
           <option value="popular">Popular</option>
           <option value="latest">Latest</option>
@@ -117,7 +124,7 @@ const Extras = () => {
           <option value="downloads">Downloads</option>
         </select>
       </form>
-      <div className="extra-image-grid">
+      <div className="extra-image-grid" data-aos="fade-in">
         {extraImages.map((image) => (
           <div key={image.id} className="extra-image-item">
             <img src={image.webformatURL} alt={image.tags} />
@@ -125,7 +132,7 @@ const Extras = () => {
         ))}
       </div>
       <form className="extra-form" onSubmit={handleExtraWeatherFormSubmit}>
-        <select value={extraSelectedCity} onChange={(e) => setExtraSelectedCity(e.target.value)} className="extra-select">
+        <select value={extraSelectedCity} onChange={(e) => setExtraSelectedCity(e.target.value)} className="extra-select" data-aos="fade-in">
           <option value="">Select a city</option>
           {citiesInJawaTengah.map((city) => (
             <option key={city} value={city}>
@@ -133,11 +140,11 @@ const Extras = () => {
             </option>
           ))}
         </select>
-        <button type="submit" className="extra-button">Get Weather</button>
+        <button type="submit" className="extra-button" data-aos="fade-in">Get Weather</button>
       </form>
-      {extraLoading && <p className="extra-loading">Loading...</p>}
+      {extraLoading && <p className="extra-loading" data-aos="fade-in">Loading...</p>}
       {extraWeatherData && (
-        <div className="extra-weather-info">
+        <div className="extra-weather-info" data-aos="fade-in">
           <h2>Weather in {extraWeatherData.name}</h2>
           {cityImage && <img src={cityImage} alt={extraSelectedCity} className="extra-city-image" />}
           <p>Temperature: {extraWeatherData.main.temp}°C</p>
