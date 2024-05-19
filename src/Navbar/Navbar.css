@@ -84,7 +84,6 @@
   transform: scaleX(1); /* Munculkan garis bawah saat hover */
 }
 
-
 .content {
   max-width: 800px;
   margin: 100px auto 50px;
@@ -156,30 +155,7 @@
     margin-right: 40px; /* Mengurangi margin kanan */
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
     white-space: nowrap; /* Mencegah teks terputus di tengah */
-  }
-
-  .navbar-link::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  .navbar-link:hover::before {
-    width: 200%;
-    transition: width 0.5s ease;
-    border-radius: 20px;
-  }
-  
-  .navbar-link:hover {
-    z-index: 1;
-    transform: scale(1.05);
-    color: yellow;
   }
   
   .menu-icon {
@@ -204,6 +180,7 @@
     transform: scale(1.1);
   }
 }
+
 @media screen and (max-width: 815px) {
   .navbar-menu {
     display: none;
@@ -235,18 +212,7 @@
     margin-right: 40px; /* Mengurangi margin kanan */
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, color 0.3s ease;
     white-space: nowrap; /* Mencegah teks terputus di tengah */
-  }
-
-  .navbar-link::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 100%;
-    z-index: -1;
   }
 
   .menu-icon {
@@ -271,4 +237,3 @@
     transform: scale(1.1);
   }
 }
-

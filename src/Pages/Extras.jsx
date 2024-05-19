@@ -38,9 +38,11 @@ const Extras = () => {
   const [extraLoading, setExtraLoading] = useState(false);
   const [sortBy, setSortBy] = useState("");
   const [cityImage, setCityImage] = useState(null);
-  
+
   useEffect(() => {
-    handleExtraImageSearch();
+    if (extraSearchTerm) {
+      handleExtraImageSearch();
+    }
   }, [sortBy]);
 
   const handleExtraImageSearch = async () => {
