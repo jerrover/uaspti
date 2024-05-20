@@ -261,15 +261,17 @@ h1 {
 
 select,
 button {
-  font-size: 16px;
+  font-size: 15px;
+  margin: 5px;
   padding: 10px;
   margin-right: 10px;
   max-width: 100%; 
   box-sizing: border-box;
+  border-radius: 20px;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #e78712;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -277,7 +279,10 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  transform: scale(1.1);
+  background-color: #e3e5e7;
+  color: #543310;
+  
 }
 
 .video-container {
