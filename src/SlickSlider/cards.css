@@ -28,6 +28,7 @@
   height: auto;
   aspect-ratio: 16/9;
   filter: grayscale(85%);
+  background-color: black;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
