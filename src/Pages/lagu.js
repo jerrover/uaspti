@@ -45,7 +45,7 @@ function Lagu() {
     <div className="container" style={{ textAlign: "center" }}>
       {" "}
       <h2>Lagu Jawa Tengah</h2>
-      <select value={selectedVideo} onChange={handleSelectChange}>
+      <select className="select-lagu" value={selectedVideo} onChange={handleSelectChange}>
         <option value="">Select Video</option>
         <option value="Lir Ilir| Lagu Daerah Jawa Tengah | Budaya Indonesia | Dongeng Kita">
           Lir Ilir| Lagu Daerah Jawa Tengah | Budaya Indonesia | Dongeng Kita
@@ -63,7 +63,7 @@ function Lagu() {
           Cublak Cublak Suweng - Lagu Daerah Jawa Tengah (dengan Lirik)
         </option>
       </select>
-      <button onClick={searchVideos}>Search</button>
+      <button className="button-lagu" onClick={searchVideos}>Search</button>
       {videoFound && (
         <div className="video-container">
           {" "}

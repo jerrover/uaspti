@@ -259,8 +259,8 @@ h1 {
   margin-bottom: 20px;
 }
 
-select,
-button {
+.select-lagu,
+.button-lagu {
   font-size: 15px;
   margin: 5px;
   padding: 10px;
@@ -270,19 +270,20 @@ button {
   border-radius: 20px;
 }
 
-button {
+.button-lagu {
   background-color: #e78712;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
+.button-lagu:hover {
   transform: scale(1.1);
   background-color: #e3e5e7;
   color: #543310;
-  
+  border: #543310 1px solid;
 }
 
 .video-container {
@@ -299,8 +300,8 @@ iframe {
 }
 
 @media (max-width: 600px) {
-  select,
-  button {
+  .select-lagu,
+  .button-lagu {
     font-size: 14px;
     padding: 8px;
     margin-right: 0;
