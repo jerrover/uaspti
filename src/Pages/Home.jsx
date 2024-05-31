@@ -33,7 +33,7 @@ const HomeApp = () => {
     const fetchJatengVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?key=AIzaSyADm5yHWhhB0rocn7hxPiN9pjE4Y2d3qMc&q=Berita+Jawa+Tengah&type=video&maxResults=3`
+          `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBnkvHiAbucmt_xxqUG68pCuTXcFD0IVYQ&q=Berita+Jawa+Tengah&type=video&maxResults=3`
         );
 
         setJatengVideos(response.data.items);

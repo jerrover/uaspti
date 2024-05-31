@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Card from "../AboutUs/card";
 import contacts from "../AboutUs/contacts";
-import "./Aboutus.css"; // Import file CSS baru
+import "./Aboutus.css"; 
 
 const Aboutus = () => {
   const [showCards, setShowCards] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Threshold untuk menampilkan kartu kontak
+      if (window.scrollY > 100) { 
         setShowCards(true);
       }
     };

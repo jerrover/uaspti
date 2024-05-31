@@ -4,32 +4,33 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    background-color: #f0f0f0;
-    padding: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgba(248, 244, 225, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    padding: 0 30px;
   }
   
   .about-us {
     font-family: 'Poppins';
     text-align: center;
     font-weight: bolder;
-    font-size: 58px;
+    font-size: clamp(3rem, 5.8vw, 58px);
     color: #333;
-    margin-bottom: 0px;
+    margin-top: -80px;
   }
   
   .intro {
     text-align: center;
     max-width: 800px;
     line-height: 1.6;
-    font-size: 25px;
+    font-size: clamp(0.8rem, 2vw, 20px);
     font-family: "poppins", arial;
+    padding: 0px 55px;
   }
   
   .cards-container {
+    margin: 10px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1.5s ease;
     margin-top: 50px;
   }
   
@@ -37,10 +38,4 @@
     opacity: 1;
   }
   
-  /* Media query untuk layar yang lebih kecil */
-  @media screen and (max-width: 768px) {
-    .intro {
-      font-size: 16px; /* Mengurangi ukuran font intro untuk layar yang lebih kecil */
-    }
-  }
   

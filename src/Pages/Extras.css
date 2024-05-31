@@ -5,8 +5,11 @@
 }
 
 .extra-heading {
-  color: #333;
+  color: #F8F4E1;
+  text-shadow: 3px 3px 4px #543310;
   font-family: "Poppins", serif;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .extra-form {
@@ -14,28 +17,47 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .extra-select,
 .extra-input,
 .extra-button {
+  margin-top: 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  padding: 8px;
-  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #1491f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.extra-select,
-.extra-input {
-  flex: 1 1 200px;
+.extra-select:focus,
+.extra-input:focus {
+  border: 1px solid;
+  border-color: #ffd903;
+  outline: none;
+  box-shadow: 0 0 5px rgba(120, 129, 138, 0.5);
 }
 
 .extra-button {
-  background-color: #007bff;
+  background-color: #cd720b;
   color: #fff;
   border: none;
   cursor: pointer;
-  flex: 1 1 100px;
+  border-radius: 8px;
+  flex: 1 1 150px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.extra-button:hover {
+  background-color: oldlace;
+  color: #543310;
+  transform: scale(1.05);
+}
+
+.extra-button:active {
+  transform: scale(1);
 }
 
 .extra-image-grid {
@@ -44,14 +66,29 @@
   grid-gap: 10px;
 }
 
+.extra-image-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .extra-image-item img {
-  width: 100%;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.536);
+  background-color: rgba(0, 0, 0, 0.877);
+  width: 90%;
   height: auto;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .extra-weather-info {
-  background-color: #333;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #74512D;
+  color: #F8F4E1;
+  text-shadow: 3px 3px 4px #543310;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -67,6 +104,8 @@
 .extra-weather-info p {
   margin: 5px 0;
   font-size: 18px;
+  color: #F8F4E1;
+  text-shadow: 1px 1px 1px #543310;
 }
 
 .extra-loading {
@@ -74,6 +113,8 @@
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
+  color: #F8F4E1;
+  text-shadow: 3px 3px 4px #543310;
 }
 
 .extra-city-image {
@@ -83,7 +124,6 @@
   margin-top: 10px;
 }
 
-/* Media queries untuk layar kecil */
 @media (max-width: 600px) {
   .extra-form {
     flex-direction: column;
@@ -97,3 +137,4 @@
     flex: 1 1 auto;
   }
 }
+
